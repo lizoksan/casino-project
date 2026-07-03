@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uk">
 	<head>
 		<meta charset="UTF-8" />
@@ -7,9 +7,250 @@
 			name="viewport"
 		/>
 		<meta content="ie=edge" http-equiv="X-UA-Compatible" />
+		<title>Casino</title>
 		<link rel="stylesheet" href="./scss/index.scss" />
 	</head>
 	<body>
+		<header class="header">
+			<div class="container">
+				<svg class="header__logo icon">
+					<use href="assets/icons/logo.svg"></use>
+				</svg>
+			</div>
+		</header>
+		<main>
+			<section class="hero">
+				<div class="container">
+					<h1 class="hero__title title">карнавал пристрасті</h1>
+					<p class="hero__description description">
+						Спробуй спеціальні бонуси, ігрові квести і казино турніри
+					</p>
+				</div>
+			</section>
+			<section class="quests">
+				<div class="container container--lg">
+					<h2 class="quests__title title">квести</h2>
+					<p class="quests__description description">роби спіни у слотах і отримуй бонуси</p>
+					<div class="quests__swiper swiper">
+						<div class="quests__wrapper swiper-wrapper">
+							<div class="quests__slide swiper-slide">
+								<picture class="quests__pic">
+									<source media="(min-width: 460px)" srcset="assets/images/woman-1.png" type="image/png" />
+									<img class="quests__img" src="assets/images/woman-1.png" alt="woman" />
+								</picture>
+								<div class="calendar">
+									<svg class="calendar__icon icon" width="23.23" height="23.23">
+										<use href="assets/icons/calendar.svg"></use>
+									</svg>
+									<p class="calendar__date">05.02 – 8.02</p>
+								</div>
+								<h3 class="quests__subtitle">Квест Загадкової Блондинки</h3>
+								<a class="button" href="./index.html">детальніше</a>
+							</div>
+							<div class="quests__slide swiper-slide">
+								<picture class="quests__pic">
+									<source media="(min-width: 460px)" srcset="assets/images/woman-2.png" type="image/png" />
+									<img class="quests__img" src="assets/images/woman-2.png" alt="woman" />
+								</picture>
+								<div class="calendar">
+									<svg class="calendar__icon icon" width="23.23" height="23.23">
+										<use href="assets/icons/calendar.svg"></use>
+									</svg>
+									<p class="calendar__date">12.02 – 15.02</p>
+								</div>
+								<h3 class="quests__subtitle">Квест Чарівної Незнайомки</h3>
+								<a class="button" href="./index.html">детальніше</a>
+							</div>
+							<div class="quests__slide swiper-slide">
+								<picture class="quests__pic">
+									<source media="(min-width: 460px)" srcset="assets/images/woman-3.png" type="image/png" />
+									<img class="quests__img" src="assets/images/woman-3.png" alt="woman" />
+								</picture>
+								<div class="calendar">
+									<svg class="calendar__icon icon" width="23.23" height="23.23">
+										<use href="assets/icons/calendar.svg"></use>
+									</svg>
+									<p class="calendar__date">19.02 – 22.02</p>
+								</div>
+								<h3 class="quests__subtitle">Квест Таємничої Леді</h3>
+								<a class="button" href="./index.html">детальніше</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="bonuses">
+				<div class="container container--lg">
+					<h2 class="bonuses__title title">бонуси</h2>
+					<p class="bonuses__description description">Отримай свою винагороду за депозит</p>
+
+					<ul class="bonuses__cards">
+						<li class="card">
+							<picture class="card__pic">
+								<source
+									media="(min-width: 1024px)"
+									srcset="assets/images/coctail-1-desk.jpg"
+									type="image/jpg"
+								/>
+								<source
+									media="(min-width: 460px)"
+									srcset="assets/images/coctail-1-mob.jpg"
+									type="image/jpg"
+								/>
+								<img class="card__img" src="assets/images/coctail-1-mob.jpg" alt="woman" />
+							</picture>
+							<div class="card__info">
+								<div class="calendar">
+									<svg class="calendar__icon icon" width="23.23" height="23.23">
+										<use href="assets/icons/calendar.svg"></use>
+									</svg>
+									<p class="calendar__date">05.02 – 12.02</p>
+								</div>
+								<h3 class="card__title title">коктель “королівська вдача”</h3>
+								<h4 class="card__subtitle">Отримуйте до 200% бонусу і 150 безкоштовних обертань щодня.</h4>
+								<a class="button" href="./index.html">активувати</a>
+							</div>
+						</li>
+						<li class="card">
+							<picture class="card__pic">
+								<source
+									media="(min-width: 1024px)"
+									srcset="assets/images/coctail-2-desk.jpg"
+									type="image/jpg"
+								/>
+								<source
+									media="(min-width: 460px)"
+									srcset="assets/images/coctail-2-mob.jpg"
+									type="image/jpg"
+								/>
+								<img class="card__img" src="assets/images/coctail-2-mob.jpg" alt="woman" />
+							</picture>
+							<div class="card__info">
+								<div class="calendar">
+									<svg class="calendar__icon icon" width="23.23" height="23.23">
+										<use href="assets/icons/calendar.svg"></use>
+									</svg>
+									<p class="calendar__date">11.02 - 18.02</p>
+								</div>
+								<h3 class="card__title title">коктель “вишневе кохання”</h3>
+								<h4 class="card__subtitle">Отримуйте до 250% бонусу і 200 безкоштовних обертань щодня.</h4>
+								<a class="button" href="./index.html">активувати</a>
+							</div>
+						</li>
+						<li class="card">
+							<picture class="card__pic">
+								<source
+									media="(min-width: 1024px)"
+									srcset="assets/images/coctail-3-desk.jpg"
+									type="image/jpg"
+								/>
+								<source
+									media="(min-width: 460px)"
+									srcset="assets/images/coctail-3-mob.jpg"
+									type="image/jpg"
+								/>
+								<img class="card__img" src="assets/images/coctail-3-mob.jpg" alt="woman" />
+							</picture>
+							<div class="card__info">
+								<div class="calendar">
+									<svg class="calendar__icon icon" width="23.23" height="23.23">
+										<use href="assets/icons/calendar.svg"></use>
+									</svg>
+									<p class="calendar__date">17.02 - 24.02</p>
+								</div>
+								<h3 class="card__title title">коктель “щаслива сімка”</h3>
+								<h4 class="card__subtitle">Отримуйте до 300% бонусу і 250 безкоштовних обертань щодня.</h4>
+								<a class="button" href="./index.html">активувати</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="tournament">
+				<div class="container">
+					<h2 class="tournament__title title">турнір</h2>
+					<p class="tournament__description description">
+						позмагайся в турнірі за
+						<span class="tournament__description description tournament__description--lg">50</span>
+						<span class="tournament__description description tournament__description--lg">000 грн</span>
+					</p>
+					<ul class="tournament__list">
+						<li class="tournament__item">
+							<picture class="tournament__pic">
+								<source media="(min-width: 1024px)" srcset="assets/images/mask-1-desk.png" type="image/png" />
+								<source media="(min-width: 460px)" srcset="assets/images/mask-1-mob.png" type="image/png" />
+								<img class="tournament__img" src="assets/images/mask-1-mob.png" alt="woman" />
+							</picture>
+						</li>
+						<li class="tournament__item">
+							<picture class="tournament__pic">
+								<source media="(min-width: 1024px)" srcset="assets/images/mask-2-desk.png" type="image/png" />
+								<source media="(min-width: 460px)" srcset="assets/images/mask-2-mob.png" type="image/png" />
+								<img class="tournament__img" src="assets/images/mask-2-mob.png" alt="woman" />
+							</picture>
+						</li>
+						<li class="tournament__item">
+							<picture class="tournament__pic">
+								<source media="(min-width: 1024px)" srcset="assets/images/mask-3-desk.png" type="image/png" />
+								<source media="(min-width: 460px)" srcset="assets/images/mask-3-mob.png" type="image/png" />
+								<img class="tournament__img" src="assets/images/mask-3-mob.png" alt="woman" />
+							</picture>
+						</li>
+						<li class="tournament__item">
+							<picture class="tournament__pic">
+								<source media="(min-width: 1024px)" srcset="assets/images/chip-1-desk.png" type="image/png" />
+								<source media="(min-width: 460px)" srcset="assets/images/chip-1-mob.png" type="image/png" />
+								<img class="tournament__img" src="assets/images/chip-1-mob.png" alt="woman" />
+							</picture>
+						</li>
+						<li class="tournament__item">
+							<picture class="tournament__pic">
+								<source media="(min-width: 1024px)" srcset="assets/images/chip-2-desk.png" type="image/png" />
+								<source media="(min-width: 460px)" srcset="assets/images/chip-2-mob.png" type="image/png" />
+								<img class="tournament__img" src="assets/images/chip-2-mob.png" alt="woman" />
+							</picture>
+						</li>
+						<li class="tournament__item">
+							<picture class="tournament__pic">
+								<source media="(min-width: 1024px)" srcset="assets/images/coin-1-desk.png" type="image/png" />
+								<source media="(min-width: 460px)" srcset="assets/images/coin-1-mob.png" type="image/png" />
+								<img class="tournament__img" src="assets/images/coin-1-mob.png" alt="woman" />
+							</picture>
+						</li>
+						<div class="tournament__info">
+							<div class="calendar">
+								<svg class="calendar__icon icon" width="23.23" height="23.23">
+									<use href="assets/icons/calendar.svg"></use>
+								</svg>
+								<p class="calendar__date">11.02 - 16.02</p>
+							</div>
+							<a class="button" href="./index.html">взяти участь</a>
+						</div>
+					</ul>
+				</div>
+			</section>
+			<section class="drawing">
+				<div class="container">
+					<div class="calendar">
+						<svg class="calendar__icon icon" width="23.23" height="23.23">
+							<use href="assets/icons/calendar.svg"></use>
+						</svg>
+						<p class="calendar__date">05.02 - 14.02</p>
+					</div>
+					<p class="drawing__title title">святкуй день закоханих з ggbetua_casino</p>
+					<p class="drawing__subtitle">
+						Не прогав можливість виграти 2 500 FS у розіграші. Підписуйся на канал, слідкуй за оновленнями та
+						отримуй бездепозитні бонуси й незабутні емоції!
+					</p>
+					<a class="button" href="./index.html">
+						<svg class="button__icon icon">
+							<use href="assets/icons/telegram.svg"></use>
+						</svg>
+						телеграм</a
+					>
+				</div>
+			</section>
+		</main>
 		<script type="module" src="./js/index.js"></script>
 	</body>
 </html>

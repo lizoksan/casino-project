@@ -1,0 +1,21 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+.hero {
+	padding: 1rem 0 20rem;
+	text-align: center;
+}
+
+.hero__title {
+	@include mq('desktop', max) {
+		margin-bottom: 1.9rem;
+		font-size: 5.8rem;
+	}
+
+	@include mq('desktop') {
+	}
+}
+
+.hero__description {
+	color: $orange;
+}

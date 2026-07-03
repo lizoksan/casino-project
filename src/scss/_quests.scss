@@ -1,0 +1,52 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.quests {
+	padding: 1rem 0 5.2rem;
+
+	background-color: #6c4835;
+}
+
+.quests__title {
+	@include mq('desktop', max) {
+		margin-bottom: 6.9rem;
+	}
+
+	@include mq('desktop') {
+	}
+}
+
+.quests__description {
+	@include mq('desktop', max) {
+		margin-bottom: 3.8rem;
+	}
+
+	@include mq('desktop') {
+	}
+}
+
+.quests__pic {
+	@include mq('desktop', max) {
+	}
+
+	@include mq('desktop') {
+	}
+}
+
+.quests__slide {
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+}
+
+.quests__subtitle {
+	@include mq('desktop', max) {
+		margin: 2.4rem 0;
+		font-size: 3.2rem;
+		text-align: center;
+	}
+
+	@include mq('desktop') {
+	}
+}

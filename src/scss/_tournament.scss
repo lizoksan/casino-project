@@ -1,0 +1,71 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.tournament {
+	padding: 1rem 0 5.2rem;
+
+	background-color: #1e58e5;
+}
+
+.tournament__title {
+	@include mq('desktop', max) {
+		margin-bottom: 5.5rem;
+	}
+
+	@include mq('desktop') {
+	}
+}
+
+.tournament__description {
+	display: block;
+	@include mq('desktop', max) {
+		margin-bottom: 3.8rem;
+	}
+
+	@include mq('desktop') {
+	}
+
+	&.tournament__description--lg {
+		display: inline-block;
+		background: linear-gradient(180deg, rgba(210, 228, 255, 1) 0%, rgba(104, 175, 255, 1) 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		color: #83bcff;
+		text-shadow: -1px -1px 6px rgba(255, 255, 255, 0.32);
+
+		-webkit-text-stroke: 0.1rem rgba(210, 228, 255, 0.5);
+
+		@include mq('desktop', max) {
+			font-size: 7rem;
+		}
+
+		@include mq('desktop') {
+			font-size: 14.2rem;
+		}
+	}
+}
+
+.tournament__list {
+	position: relative;
+	aspect-ratio: 500/325;
+}
+
+.tournament__item {
+	position: absolute;
+
+	width: 100%;
+	height: 100%;
+
+	&:nth-child(1) {
+		top: 0;
+		left: 0;
+	}
+}
+
+.tournament__info {
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+	gap: 1.9rem;
+}
