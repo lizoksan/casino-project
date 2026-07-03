@@ -1,0 +1,64 @@
+@use 'sass:map';
+@use 'sass:string';
+
+$breakpoints: (
+	'tablet': 768px,
+	'desktop': 1024px,
+	'desktop-wide': 1920px,
+);
+
+@mixin mq($width, $type: min) {
+	@if map.has-key($breakpoints, $width) {
+		$width: map.get($breakpoints, $width);
+	}
+	@if $type == max {
+		$width: $width - 0.02px;
+	}
+	@media screen and (#{$type}-width: $width) {
+		@content;
+	}
+}
+
+@function _bg-ext($path) {
+	$dot: 0;
+	@for $i from 1 through string.length($path) {
+		@if string.slice($path, $i, $i) == '.' {
+			$dot: $i;
+		}
+	}
+	@return string.slice($path, $dot + 1);
+}
+
+@function _bg-base($path) {
+	$dot: 0;
+	@for $i from 1 through string.length($path) {
+		@if string.slice($path, $i, $i) == '.' {
+			$dot: $i;
+		}
+	}
+	@return string.slice($path, 1, $dot - 1);
+}
+
+@mixin bg($path) {
+	$base: _bg-base($path);
+	$ext: _bg-ext($path);
+	$mime: $ext;
+	@if $ext == 'jpg' or $ext == 'jpeg' {
+		$mime: 'jpeg';
+	}
+
+	background-image: url('#{$path}');
+	background-image: image-set(
+		url('#{$base}.webp') type('image/webp'),
+		url('#{$path}') type('image/#{$mime}')
+	);
+}
+
+@mixin fontFace($fontPath, $fontName, $weight: normal, $style: normal) {
+	@font-face {
+		font-family: '#{$fontName}';
+		src: url('#{$fontPath}.woff2') format('woff2'), url('#{$fontPath}.woff') format('woff');
+		font-weight: $weight;
+		font-style: $style;
+	}
+}

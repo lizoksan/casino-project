@@ -1,0 +1,4 @@
+@use 'mixins' as *;
+
+@include fontFace('../assets/fonts/klapt-cyrillic', 'Klapt');
+@include fontFace('../assets/fonts/roboto-regular', 'Roboto');
