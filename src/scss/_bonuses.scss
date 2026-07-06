@@ -2,23 +2,24 @@
 @use 'mixins' as *;
 
 .bonuses {
-	padding: 5.2rem 0 4.3rem;
+	padding: 4.8rem 0 4.3rem;
 
 	background-color: #b37b5a;
 }
 
 .bonuses__title {
-	margin-bottom: 4.7rem;
+	margin-bottom: 5rem;
 }
 
 .bonuses__description {
-	margin-bottom: 1.6rem;
+	margin: 0 auto 1.9rem;
+	max-width: 33rem;
 }
 
 .bonuses__cards {
 	display: flex;
 	flex-direction: column;
-	gap: 3.9rem;
+	gap: 3.7rem;
 }
 
 .card {
@@ -27,7 +28,7 @@
 	align-items: center;
 	padding-bottom: 3.7rem;
 	border-radius: 1rem;
-	border: 0.1rem solid $orange-border;
+	border: 0.1rem solid $card-border;
 	overflow: hidden;
 	backdrop-filter: blur(7rem);
 
@@ -54,7 +55,13 @@
 	}
 }
 
+.card__pic {
+	width: 45.8rem;
+	height: 23rem;
+}
+
 .card__info {
+	margin-top: -0.3rem;
 	max-width: 30rem;
 	display: flex;
 	flex-direction: column;
@@ -62,11 +69,11 @@
 }
 
 .card__title {
-	margin: 3rem 0 1.6rem;
+	margin: 2.4rem 0 2.4rem;
 }
 
 .card__subtitle {
-	margin: 0 0 1.6rem;
+	margin: 0 0 1.8rem;
 	font-size: 1.8rem;
 	text-align: center;
 }

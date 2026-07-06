@@ -2,13 +2,13 @@
 @use 'variables' as *;
 
 .hero {
-	padding: 1rem 0 20rem;
+	padding: 1.2rem 0 4rem;
 	text-align: center;
 }
 
 .hero__title {
 	@include mq('desktop', max) {
-		margin-bottom: 1.9rem;
+		margin-bottom: 2rem;
 		font-size: 5.8rem;
 	}
 
@@ -18,4 +18,33 @@
 
 .hero__description {
 	color: $orange;
+}
+
+.hero__decoration {
+	position: relative;
+	padding: 0 0 42rem;
+}
+
+.hero__pic {
+	position: absolute;
+}
+
+.hero__pic--big {
+	bottom: -8.2rem;
+	left: -1.1rem;
+	width: 18rem;
+	height: 18rem;
+}
+
+.hero__pic--small {
+	bottom: -6.3rem;
+	right: 1.2rem;
+	width: 10.5rem;
+	height: 9rem;
+}
+
+.hero__pic--right {
+	position: absolute;
+	top: 0;
+	right: 0;
 }
