@@ -2,7 +2,19 @@
 @use 'mixins' as *;
 
 .drawing {
-	padding: 2.5rem 0 5.2rem;
+	@include mq('desktop', max) {
+		padding: 2.5rem 0 5.2rem;
+	}
+
+	@include mq('desktop') {
+		padding: 4rem 0 5.2rem;
+	}
+}
+
+.drawing__container {
+	@include mq('desktop') {
+		padding: 0 40.7rem;
+	}
 }
 
 .drawing__title {
@@ -11,30 +23,55 @@
 	}
 
 	@include mq('desktop') {
+		margin-bottom: 19.9rem;
 	}
-}
-
-.drawing__description {
-	margin: 2rem 0 1.8rem;
-	max-width: 34rem;
-	line-height: 1;
-
-	color: $white;
 }
 
 .drawing__info {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+
+	@include mq('desktop', max) {
+		align-items: center;
+	}
+
+	@include mq('desktop') {
+		align-items: start;
+	}
+}
+
+.drawing__description {
+	color: $white;
+
+	@include mq('desktop', max) {
+		margin: 2rem 0 1.8rem;
+		max-width: 34rem;
+	}
+
+	@include mq('desktop') {
+		margin: 2.2rem 0 2.8rem;
+		max-width: 53rem;
+		text-align: left;
+		letter-spacing: 2%;
+	}
 }
 
 .drawing__text {
-	margin-bottom: 2.6rem;
 	font-size: 1.8rem;
-	text-align: center;
+
 	letter-spacing: 1.8%;
 
 	&--highlight {
 		color: $orange;
+	}
+
+	@include mq('desktop', max) {
+		margin-bottom: 2.6rem;
+		text-align: center;
+	}
+
+	@include mq('desktop') {
+		margin-bottom: 2.8rem;
+		max-width: 53rem;
 	}
 }

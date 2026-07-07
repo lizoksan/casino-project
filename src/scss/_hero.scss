@@ -2,8 +2,41 @@
 @use 'variables' as *;
 
 .hero {
-	padding: 1.2rem 0 4rem;
-	text-align: center;
+	@include mq('desktop', max) {
+		padding: 4.8rem 0 4rem;
+	}
+
+	@include mq('desktop') {
+		padding: 12.5rem 0 4rem;
+	}
+}
+
+.hero__content {
+	display: flex;
+	flex-direction: column;
+
+	@include mq('desktop', max) {
+		align-items: center;
+	}
+
+	@include mq('desktop') {
+		align-items: start;
+		max-width: 66rem;
+	}
+}
+
+.logo {
+	@include mq('desktop', max) {
+		width: 21rem;
+		height: 4.2rem;
+		margin-bottom: 2.2rem;
+	}
+
+	@include mq('desktop') {
+		width: 37rem;
+		height: 7rem;
+		margin-bottom: 5rem;
+	}
 }
 
 .hero__title {
@@ -13,38 +46,65 @@
 	}
 
 	@include mq('desktop') {
+		margin-bottom: 4.4rem;
+		font-size: 9.3rem;
+		text-align: left;
 	}
 }
 
 .hero__description {
 	color: $orange;
+
+	@include mq('desktop') {
+		text-align: left;
+	}
 }
 
 .hero__decoration {
 	position: relative;
-	padding: 0 0 42rem;
+
+	@include mq('desktop', max) {
+		padding: 0 0 42rem;
+	}
+
+	@include mq('desktop') {
+		padding: 0 0 20rem;
+	}
 }
 
 .hero__pic {
 	position: absolute;
+	animation: levitate 3s infinite ease-in-out 0s;
 }
 
 .hero__pic--big {
-	bottom: -8.2rem;
-	left: -1.1rem;
-	width: 18rem;
-	height: 18rem;
+	@include mq('desktop', max) {
+		bottom: -8.2rem;
+		left: -1.1rem;
+		width: 18rem;
+		height: 18rem;
+	}
+
+	@include mq('desktop') {
+		bottom: -9rem;
+		left: 27.2rem;
+		width: 29.6rem;
+		height: 28.9rem;
+	}
 }
 
 .hero__pic--small {
-	bottom: -6.3rem;
-	right: 1.2rem;
-	width: 10.5rem;
-	height: 9rem;
-}
+	@include mq('desktop', max) {
+		bottom: -6.3rem;
+		right: 1.2rem;
+		width: 10.5rem;
+		height: 9rem;
+	}
 
-.hero__pic--right {
-	position: absolute;
-	top: 0;
-	right: 0;
+	@include mq('desktop') {
+		bottom: -10.3rem;
+		right: 0.4rem;
+		width: 19.8rem;
+		height: 17rem;
+	}
 }

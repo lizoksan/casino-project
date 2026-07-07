@@ -2,9 +2,25 @@
 @use 'mixins' as *;
 
 .quests {
-	padding: 2rem 0 4.8rem;
-
 	background-color: #6c4835;
+
+	@include mq('desktop', max) {
+		padding: 2rem 0 4.8rem;
+	}
+
+	@include mq('desktop') {
+		padding: 3rem 0 4.8rem;
+	}
+}
+
+.quests__container {
+	@include mq('desktop', max) {
+		padding: 0 3.4rem;
+	}
+
+	@include mq('desktop') {
+		padding: 0 32.2rem;
+	}
 }
 
 .quests__title {
@@ -13,6 +29,7 @@
 	}
 
 	@include mq('desktop') {
+		margin-bottom: 6.4rem;
 	}
 }
 
@@ -23,6 +40,8 @@
 	}
 
 	@include mq('desktop') {
+		margin-bottom: 2.9rem;
+		// text-align: center;
 	}
 }
 
@@ -32,16 +51,37 @@
 
 .quests__pic {
 	position: absolute;
-	top: -10.8rem;
-	width: 13rem;
-	height: 13rem;
+
+	@include mq('desktop', max) {
+		width: 13rem;
+		height: 13rem;
+		top: -10.8rem;
+	}
+
+	@include mq('desktop') {
+		width: 22.7rem;
+		height: 22.7rem;
+		top: 1.9rem;
+	}
 
 	&--left {
-		left: -6.2rem;
+		@include mq('desktop', max) {
+			left: -6.2rem;
+		}
+
+		@include mq('desktop') {
+			left: -23rem;
+		}
 	}
 
 	&--right {
-		right: -6.5rem;
+		@include mq('desktop', max) {
+			right: -6.5rem;
+		}
+
+		@include mq('desktop') {
+			right: -23.3rem;
+		}
 	}
 }
 
@@ -92,19 +132,20 @@
 }
 
 .slide__img {
-	width: 37.3rem;
-	height: 47.5rem;
+	width: 37.2rem;
+	height: 47.6rem;
+
+	transition: transform 0.3s ease-in-out;
+
+	&:hover {
+		transform: scale(1.05);
+	}
 }
 
 .slide__subtitle {
-	@include mq('desktop', max) {
-		margin: 2rem 0 2.9rem;
-		font-size: 3.2rem;
-		line-height: 0.9;
+	margin: 2rem 0 2.9rem;
+	font-size: 3.2rem;
+	line-height: 0.9;
 
-		text-align: center;
-	}
-
-	@include mq('desktop') {
-	}
+	text-align: center;
 }

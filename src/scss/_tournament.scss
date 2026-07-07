@@ -2,9 +2,25 @@
 @use 'mixins' as *;
 
 .tournament {
-	padding: 3.5rem 0 3.5rem;
-
 	background-color: #1e58e5;
+
+	@include mq('desktop', max) {
+		padding: 3.3rem 0 3.5rem;
+	}
+
+	@include mq('desktop') {
+		padding: 10rem 0 7rem;
+	}
+}
+
+.tournament__container {
+	@include mq('desktop', max) {
+		padding: 0 2.2rem;
+	}
+
+	@include mq('desktop') {
+		padding: 0 28rem;
+	}
 }
 
 .tournament__title {
@@ -13,11 +29,11 @@
 	}
 
 	@include mq('desktop') {
+		margin-bottom: 5.6rem;
 	}
 }
 
 .tournament__description {
-	display: block;
 	@include mq('desktop', max) {
 		// margin-bottom: 3.8rem;
 	}
@@ -34,7 +50,6 @@
 		color: #83bcff;
 		text-shadow: -1px -1px 6px rgba(255, 255, 255, 0.32);
 		-webkit-text-stroke: 0.1rem rgba(210, 228, 255, 0.5);
-		line-height: 1;
 
 		@include mq('desktop', max) {
 			font-size: 7rem;
@@ -46,56 +61,133 @@
 	}
 }
 
+.tournament__span {
+	display: flex;
+	justify-content: center;
+
+	@include mq('desktop', max) {
+		gap: 1rem;
+	}
+
+	@include mq('desktop') {
+		gap: 1.4rem;
+		margin-top: -2.3rem;
+	}
+}
+
 .tournament__list {
 	position: relative;
-	aspect-ratio: 450/270;
-	margin-bottom: 2rem;
+
+	@include mq('desktop', max) {
+		aspect-ratio: 450/270;
+		margin-bottom: 1.7rem;
+	}
+
+	@include mq('desktop') {
+		aspect-ratio: 1099/383;
+		margin-bottom: 1.7rem;
+	}
 }
 
 .tournament__item {
 	position: absolute;
 
 	&:nth-child(1) {
-		top: -1.6rem;
-		left: 13.2rem;
+		@include mq('desktop', max) {
+			top: -1.7rem;
+			left: 13.4rem;
 
-		width: 17.2rem;
-		height: 15.4rem;
+			width: 17.2rem;
+			height: 15.4rem;
+		}
+
+		@include mq('desktop') {
+			top: -5.5rem;
+			left: 50.9rem;
+
+			width: 35rem;
+			height: 31.5rem;
+		}
 	}
 
 	&:nth-child(2) {
-		top: 2.2rem;
-		right: -6.3rem;
-		width: 25rem;
-		height: 24rem;
+		@include mq('desktop', max) {
+			top: 2.1rem;
+			right: -6.1rem;
+			width: 25rem;
+			height: 24rem;
+		}
+
+		@include mq('desktop') {
+			top: 2.2rem;
+			right: 15rem;
+			width: 51rem;
+			height: 49.4rem;
+		}
 	}
 
 	&:nth-child(3) {
-		top: 0.5rem;
-		left: -2.7rem;
-		width: 24.7rem;
-		height: 25.8rem;
+		@include mq('desktop', max) {
+			top: 0.4rem;
+			left: -2.5rem;
+			width: 24.7rem;
+			height: 25.8rem;
+		}
+
+		@include mq('desktop') {
+			top: -1.3rem;
+			left: 16.5rem;
+			width: 50.5rem;
+			height: 52.8rem;
+		}
 	}
 
 	&:nth-child(4) {
-		bottom: -6.5rem;
-		right: 3rem;
-		width: 9rem;
-		height: 7rem;
+		@include mq('desktop', max) {
+			bottom: -6.1rem;
+			right: 3.1rem;
+			width: 9rem;
+			height: 7rem;
+		}
+
+		@include mq('desktop') {
+			bottom: 4.5rem;
+			right: 60.3rem;
+			width: 18.6rem;
+			height: 14.2rem;
+		}
 	}
 
 	&:nth-child(5) {
-		top: -2.2rem;
-		right: 2.3rem;
-		width: 7.2rem;
-		height: 6.3rem;
+		@include mq('desktop', max) {
+			top: -2.3rem;
+			right: 2.5rem;
+			width: 7.2rem;
+			height: 6.3rem;
+		}
+
+		@include mq('desktop') {
+			top: 3.7rem;
+			right: 10.4rem;
+			width: 14rem;
+			height: 13rem;
+		}
 	}
 
 	&:nth-child(6) {
-		bottom: 3.6rem;
-		right: 18.7rem;
-		width: 4.1rem;
-		height: 4.1rem;
+		@include mq('desktop', max) {
+			bottom: 4rem;
+			right: 18.9rem;
+			width: 4.1rem;
+			height: 4.1rem;
+		}
+
+		@include mq('desktop') {
+			top: 6.4rem;
+			left: 16.8rem;
+			width: 8.6rem;
+			height: 7.7rem;
+		}
 	}
 }
 
@@ -111,5 +203,12 @@
 	flex-direction: column;
 
 	align-items: center;
-	gap: 1.9rem;
+
+	@include mq('desktop', max) {
+		gap: 1.9rem;
+	}
+
+	@include mq('desktop') {
+		gap: 3.4rem;
+	}
 }

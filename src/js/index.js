@@ -18,5 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
 			nextEl: '.quests__button--next',
 			prevEl: '.quests__button--prev',
 		},
+
+		breakpoints: {
+			1024: {
+				enabled: false,
+				slidesPerView: 3,
+				spaceBetween: 79,
+			},
+		},
 	});
 });

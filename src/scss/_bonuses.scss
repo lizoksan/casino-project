@@ -2,35 +2,74 @@
 @use 'mixins' as *;
 
 .bonuses {
-	padding: 4.8rem 0 4.3rem;
-
 	background-color: #b37b5a;
+
+	@include mq('desktop', max) {
+		padding: 4.8rem 0 4.3rem;
+	}
+
+	@include mq('desktop') {
+		padding: 5.8rem 0 10.3rem;
+	}
+}
+
+.bonuses__container {
+	@include mq('desktop', max) {
+		padding: 0 3.4rem;
+	}
+
+	@include mq('desktop') {
+		padding: 0 33.3rem;
+	}
 }
 
 .bonuses__title {
-	margin-bottom: 5rem;
+	margin-bottom: 5.3rem;
 }
 
 .bonuses__description {
-	margin: 0 auto 1.9rem;
-	max-width: 33rem;
+	@include mq('desktop', max) {
+		margin: 0 auto 1.6rem;
+		max-width: 33rem;
+	}
+
+	@include mq('desktop') {
+		margin: 0 auto 3.1rem;
+		max-width: 50rem;
+	}
 }
 
 .bonuses__cards {
 	display: flex;
 	flex-direction: column;
-	gap: 3.7rem;
+
+	@include mq('desktop', max) {
+		gap: 3.7rem;
+	}
+
+	@include mq('desktop') {
+		gap: 4.3rem;
+	}
 }
 
 .card {
+	position: relative;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	padding-bottom: 3.7rem;
+
 	border-radius: 1rem;
 	border: 0.1rem solid $card-border;
 	overflow: hidden;
 	backdrop-filter: blur(7rem);
+
+	@include mq('desktop', max) {
+		align-items: center;
+		padding: 23rem 0 3.8rem;
+	}
+
+	@include mq('desktop') {
+		padding: 4.1rem 40rem 3.8rem 6.9rem;
+	}
 
 	&:first-child {
 		background: linear-gradient(
@@ -48,6 +87,15 @@
 			rgba(88, 12, 32, 1) 34%,
 			rgba(94, 20, 43, 0.77) 45%
 		);
+
+		@include mq('desktop') {
+			align-items: flex-end;
+			padding: 4.1rem 5.2rem 3.8rem 6.9rem;
+
+			& .card__info {
+				max-width: 43rem;
+			}
+		}
 	}
 
 	&:nth-child(3) {
@@ -56,24 +104,74 @@
 }
 
 .card__pic {
-	width: 45.8rem;
-	height: 23rem;
+	position: absolute;
+
+	@include mq('desktop', max) {
+		top: 0;
+		left: 0;
+	}
+
+	@include mq('desktop') {
+		z-index: -2;
+		top: 0;
+		right: 0;
+	}
+}
+
+.card__img {
+	@include mq('desktop', max) {
+		width: 39rem;
+		height: 54rem;
+	}
+
+	@include mq('desktop') {
+		width: 125rem;
+		height: 34rem;
+	}
 }
 
 .card__info {
-	margin-top: -0.3rem;
-	max-width: 30rem;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+
+	@include mq('desktop', max) {
+		align-items: center;
+		margin-top: -0.3rem;
+		max-width: 30rem;
+	}
+
+	@include mq('desktop') {
+		align-items: start;
+		max-width: 46.8rem;
+	}
 }
 
 .card__title {
-	margin: 2.4rem 0 2.4rem;
+	@include mq('desktop', max) {
+		margin: 2.4rem 0 2.4rem;
+	}
+
+	@include mq('desktop') {
+		margin: 2.4rem 0 2.8rem;
+		font-size: 3.4rem;
+		text-align: start;
+	}
+}
+
+.card__span {
+	display: block;
 }
 
 .card__subtitle {
-	margin: 0 0 1.8rem;
 	font-size: 1.8rem;
-	text-align: center;
+
+	@include mq('desktop', max) {
+		margin: 0 0 1.9rem;
+		text-align: center;
+	}
+
+	@include mq('desktop') {
+		margin: 0 0 2.7rem;
+		text-align: start;
+	}
 }
