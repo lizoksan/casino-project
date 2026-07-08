@@ -2,14 +2,14 @@
 @use 'mixins' as *;
 
 .bonuses {
-	background-color: #b37b5a;
-
 	@include mq('desktop', max) {
 		padding: 4.8rem 0 4.3rem;
+		margin: -194rem 0 0;
 	}
 
 	@include mq('desktop') {
-		padding: 5.8rem 0 10.3rem;
+		padding: 5.8rem 0 20.1rem;
+		margin: -153.9rem 0 0;
 	}
 }
 
@@ -21,6 +21,10 @@
 	@include mq('desktop') {
 		padding: 0 33.3rem;
 	}
+}
+
+.bonuses__wrapper {
+	position: relative;
 }
 
 .bonuses__title {
@@ -36,6 +40,48 @@
 	@include mq('desktop') {
 		margin: 0 auto 3.1rem;
 		max-width: 50rem;
+	}
+}
+
+.bonuses__pic {
+	@include mq('desktop', max) {
+		display: none;
+	}
+
+	@include mq('desktop') {
+		position: absolute;
+		// object-fit: cover;
+		top: 0;
+		left: 0;
+
+		animation: dance 6s infinite ease-in-out 2s;
+	}
+
+	&:first-of-type {
+		@include mq('desktop') {
+			top: -4.1rem;
+			left: -29.2rem;
+			width: 54.9rem;
+			height: 81.8rem;
+		}
+	}
+
+	&:nth-of-type(2) {
+		@include mq('desktop') {
+			top: 11.6rem;
+			left: -59rem;
+			width: 104.6rem;
+			height: 104.6rem;
+		}
+	}
+
+	&:nth-of-type(3) {
+		@include mq('desktop') {
+			top: 18.6rem;
+			left: 94.6rem;
+			width: 78.6rem;
+			height: 105.7rem;
+		}
 	}
 }
 
@@ -60,7 +106,7 @@
 	border-radius: 1rem;
 	border: 0.1rem solid $card-border;
 	overflow: hidden;
-	backdrop-filter: blur(7rem);
+	backdrop-filter: blur(0.7rem);
 
 	@include mq('desktop', max) {
 		align-items: center;
@@ -72,12 +118,7 @@
 	}
 
 	&:first-child {
-		background: linear-gradient(
-			180deg,
-			rgba(44, 26, 75, 0.77) 24%,
-			rgba(33, 13, 62, 1) 34%,
-			rgba(44, 26, 75, 0.77) 45%
-		);
+		background-color: rgba(44, 26, 75, 0.77);
 	}
 
 	&:nth-child(2) {

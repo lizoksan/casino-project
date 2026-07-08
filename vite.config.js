@@ -220,6 +220,39 @@ function imageOptimizePlugin() {
 	};
 }
 
+function devWebpPlugin() {
+	async function generateWebp(imgPath) {
+		const webpPath = imgPath.replace(/\.(jpe?g|png)$/i, '.webp');
+		try {
+			const [srcStat, webpStat] = await Promise.all([
+				fs.stat(imgPath),
+				fs.stat(webpPath).catch(() => null),
+			]);
+			if (webpStat && webpStat.mtimeMs >= srcStat.mtimeMs) return;
+			await sharp(imgPath).webp({ quality: 90 }).toFile(webpPath);
+		} catch {}
+	}
+
+	return {
+		name: 'dev-webp',
+		apply: 'serve',
+		async configureServer(server) {
+			const images = await fg('src/assets/images/**/*.{jpg,jpeg,png}');
+			await Promise.all(images.map(generateWebp));
+
+			const imagesDir = path.resolve('src/assets/images');
+			server.watcher.add(imagesDir);
+			const handle = (file) => {
+				if (/\.(jpe?g|png)$/i.test(file) && path.resolve(file).startsWith(imagesDir)) {
+					generateWebp(file);
+				}
+			};
+			server.watcher.on('add', handle);
+			server.watcher.on('change', handle);
+		},
+	};
+}
+
 // ─── Config ────────────────────────────────────────────────────────────────────
 
 export default defineConfig({
@@ -255,5 +288,5 @@ export default defineConfig({
 		},
 	},
 
-	plugins: [svgSpritePlugin(), webpSourcePlugin(), imageOptimizePlugin()],
+	plugins: [svgSpritePlugin(), webpSourcePlugin(), imageOptimizePlugin(), devWebpPlugin()],
 });

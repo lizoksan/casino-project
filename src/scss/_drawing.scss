@@ -2,12 +2,18 @@
 @use 'mixins' as *;
 
 .drawing {
+	background-size: cover;
+
 	@include mq('desktop', max) {
-		padding: 2.5rem 0 5.2rem;
+		padding: 3.4rem 0 3rem;
+
+		@include bg('../assets/images/drawing-mob.jpg');
 	}
 
 	@include mq('desktop') {
-		padding: 4rem 0 5.2rem;
+		padding: 5.7rem 0 31.5rem;
+
+		@include bg('../assets/images/letter-desk.jpg');
 	}
 }
 
@@ -19,11 +25,22 @@
 
 .drawing__title {
 	@include mq('desktop', max) {
-		margin-bottom: 38.7rem;
+		margin-bottom: 6.4rem;
 	}
 
 	@include mq('desktop') {
 		margin-bottom: 19.9rem;
+	}
+}
+
+.letter {
+	position: relative;
+
+	@include mq('desktop', max) {
+		aspect-ratio: 460/360;
+	}
+
+	@include mq('desktop') {
 	}
 }
 
@@ -37,6 +54,59 @@
 
 	@include mq('desktop') {
 		align-items: start;
+	}
+}
+
+.letter__pic {
+	@include mq('desktop', max) {
+		position: absolute;
+		top: -7.3rem;
+		right: -2.4rem;
+
+		width: 46rem;
+		height: 51rem;
+	}
+
+	@include mq('desktop') {
+		display: none;
+	}
+}
+
+.letter__shine {
+	position: absolute;
+
+	animation: shine 6s ease-in-out 10s infinite;
+
+	&--big {
+		@include mq('desktop', max) {
+			top: -8.7rem;
+			right: 11rem;
+			width: 20.8rem;
+			height: 20.6rem;
+		}
+
+		@include mq('desktop') {
+			top: -32rem;
+			right: -1.4rem;
+			width: 43.5rem;
+			height: 43rem;
+		}
+	}
+
+	&--small {
+		@include mq('desktop', max) {
+			top: 6rem;
+			right: 26rem;
+			width: 10.4rem;
+			height: 10.3rem;
+		}
+
+		@include mq('desktop') {
+			top: -100rem;
+			right: 30rem;
+			width: 20.4rem;
+			height: 20.3rem;
+		}
 	}
 }
 
