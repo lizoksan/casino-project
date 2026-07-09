@@ -3,16 +3,19 @@
 
 .quests {
 	background-size: cover;
+	background-position: top;
+
 	@include mq('desktop', max) {
 		margin: -1.6rem 0 0;
 		padding: 0.7rem 0 198.8rem;
 
 		@include bg('../assets/images/quests-mob.jpg');
+		// @include bg('../assets/images/3.jpg');
 	}
 
 	@include mq('desktop') {
 		padding: 2rem 0 158.8rem;
-		margin: -1rem 0 0;
+		margin: -4rem 0 0;
 
 		@include bg('../assets/images/quests-desk.jpg');
 	}
@@ -28,7 +31,48 @@
 	}
 }
 
+.quests__ribbon {
+	position: absolute;
+	@include mq('desktop', max) {
+		bottom: 0%;
+		left: 50%;
+		transform: translate(-47.7%, 35.1%);
+		width: 91.6rem;
+		height: 27.6rem;
+	}
+
+	@include mq('desktop') {
+		bottom: 15%;
+		left: 50%;
+		transform: translate(-50%, 36.3%);
+		width: 192.1rem;
+		height: 44.8rem;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		background: linear-gradient(180deg, rgba(210, 228, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
+		width: 100%;
+		left: 0;
+
+		z-index: -1;
+
+		@include mq('desktop', max) {
+			top: 11rem;
+			height: 5rem;
+		}
+
+		@include mq('desktop') {
+			top: 24rem;
+			height: 5rem;
+		}
+	}
+}
+
 .quests__title {
+	position: relative;
+	z-index: 1;
 	@include mq('desktop', max) {
 		margin-bottom: 6.9rem;
 	}
@@ -46,12 +90,20 @@
 
 	@include mq('desktop') {
 		margin-bottom: 2.9rem;
-		// text-align: center;
 	}
 }
 
 .quests__decoration {
 	position: relative;
+
+	@include mq('desktop', max) {
+		margin: 0 auto;
+		max-width: 45rem;
+	}
+
+	@include mq('desktop') {
+		max-width: 1920rem;
+	}
 }
 
 .quests__pic {
@@ -91,7 +143,7 @@
 }
 
 .quests__swiper {
-	position: relative;
+	// position: relative;
 	overflow: visible !important;
 }
 
@@ -137,7 +189,7 @@
 	align-items: center;
 }
 
-.slide__img {
+.slide__pic {
 	width: 37.2rem;
 	height: 47.6rem;
 
@@ -146,6 +198,10 @@
 	&:hover {
 		transform: scale(1.05);
 	}
+}
+
+.slide__img {
+	min-width: 37.2rem;
 }
 
 .slide__subtitle {

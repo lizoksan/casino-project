@@ -54,6 +54,11 @@ html {
 	}
 }
 
+.wrapper {
+	position: relative;
+	z-index: 1;
+}
+
 .title {
 	line-height: 94%;
 	text-align: center;

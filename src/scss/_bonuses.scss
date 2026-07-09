@@ -2,8 +2,9 @@
 @use 'mixins' as *;
 
 .bonuses {
+	position: relative;
 	@include mq('desktop', max) {
-		padding: 4.8rem 0 4.3rem;
+		padding: 5.1rem 0 4.3rem;
 		margin: -194rem 0 0;
 	}
 
@@ -21,19 +22,56 @@
 	@include mq('desktop') {
 		padding: 0 33.3rem;
 	}
-}
 
-.bonuses__wrapper {
-	position: relative;
+	&::after {
+		content: '';
+		position: absolute;
+		background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
+		width: 100%;
+		left: 0;
+
+		// z-index: -1;
+
+		@include mq('desktop', max) {
+			bottom: 0;
+			height: 5rem;
+		}
+
+		@include mq('desktop') {
+			bottom: 0;
+			height: 5rem;
+		}
+	}
 }
 
 .bonuses__title {
 	margin-bottom: 5.3rem;
 }
 
+.bonuses__ribbon {
+	position: absolute;
+	z-index: -2;
+	@include mq('desktop', max) {
+		bottom: 0%;
+		left: 50%;
+		transform: translate(-49.8%, 43.8%);
+		width: 85.3rem;
+		height: 29.2rem;
+		// aspect-ratio: 916/276;
+	}
+
+	@include mq('desktop') {
+		bottom: 15%;
+		left: 50%;
+		transform: translate(-49.6%, 54.1%);
+		width: 124.3rem;
+		height: 42.5rem;
+	}
+}
+
 .bonuses__description {
 	@include mq('desktop', max) {
-		margin: 0 auto 1.6rem;
+		margin: 0 auto 1.5rem;
 		max-width: 33rem;
 	}
 
@@ -41,6 +79,10 @@
 		margin: 0 auto 3.1rem;
 		max-width: 50rem;
 	}
+}
+.bonuses__decoration {
+	position: relative;
+	z-index: -1;
 }
 
 .bonuses__pic {
@@ -50,26 +92,23 @@
 
 	@include mq('desktop') {
 		position: absolute;
-		// object-fit: cover;
-		top: 0;
-		left: 0;
 
 		animation: dance 6s infinite ease-in-out 2s;
 	}
 
 	&:first-of-type {
 		@include mq('desktop') {
-			top: -4.1rem;
-			left: -29.2rem;
-			width: 54.9rem;
+			top: -23.6rem;
+			left: -28.9rem;
+			width: 54.3rem;
 			height: 81.8rem;
 		}
 	}
 
 	&:nth-of-type(2) {
 		@include mq('desktop') {
-			top: 11.6rem;
-			left: -59rem;
+			top: -7.9rem;
+			left: -58.8rem;
 			width: 104.6rem;
 			height: 104.6rem;
 		}
@@ -77,9 +116,9 @@
 
 	&:nth-of-type(3) {
 		@include mq('desktop') {
-			top: 18.6rem;
+			top: -1rem;
 			left: 94.6rem;
-			width: 78.6rem;
+			width: 78.5rem;
 			height: 105.7rem;
 		}
 	}
@@ -91,10 +130,11 @@
 
 	@include mq('desktop', max) {
 		gap: 3.7rem;
+		margin: 0 auto;
 	}
 
 	@include mq('desktop') {
-		gap: 4.3rem;
+		gap: 4.5rem;
 	}
 }
 
@@ -102,6 +142,7 @@
 	position: relative;
 	display: flex;
 	flex-direction: column;
+	z-index: 1;
 
 	border-radius: 1rem;
 	border: 0.1rem solid $card-border;
@@ -110,11 +151,14 @@
 
 	@include mq('desktop', max) {
 		align-items: center;
-		padding: 23rem 0 3.8rem;
+		padding: 59% 0 2%;
+		aspect-ratio: 392/542;
+		max-width: 39.2rem;
 	}
 
 	@include mq('desktop') {
 		padding: 4.1rem 40rem 3.8rem 6.9rem;
+		aspect-ratio: 1253/341;
 	}
 
 	&:first-child {
@@ -146,6 +190,7 @@
 
 .card__pic {
 	position: absolute;
+	width: 100%;
 
 	@include mq('desktop', max) {
 		top: 0;
@@ -160,15 +205,7 @@
 }
 
 .card__img {
-	@include mq('desktop', max) {
-		width: 39rem;
-		height: 54rem;
-	}
-
-	@include mq('desktop') {
-		width: 125rem;
-		height: 34rem;
-	}
+	width: 100%;
 }
 
 .card__info {
@@ -189,7 +226,7 @@
 
 .card__title {
 	@include mq('desktop', max) {
-		margin: 2.4rem 0 2.4rem;
+		margin: 2.3rem 0 2.4rem;
 	}
 
 	@include mq('desktop') {

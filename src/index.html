@@ -25,27 +25,40 @@
 					</div>
 
 					<div class="hero__decoration">
-						<picture class="hero__pic hero__pic--big">
+						<picture class="hero__picture">
+							<source media="(min-width: 460px)" srcset="assets/images/man-mobile.png" type="image/png" />
+
+							<img src="assets/images/man-mobile.png" alt="dice" />
+						</picture>
+
+						<picture class="hero__cube hero__cube--big">
 							<source media="(min-width: 1920px)" srcset="assets/images/cube1-desk.png" type="image/png" />
 
 							<source media="(min-width: 460px)" srcset="assets/images/cube1-mob.png" type="image/png" />
 
-							<img class="hero__img" src="assets/images/cube1-mob.png" alt="dice" />
+							<img src="assets/images/cube1-mob.png" alt="dice" />
 						</picture>
-
-						<picture class="hero__pic hero__pic--small">
+						<picture class="hero__cube hero__cube--small">
 							<source media="(min-width: 1920px)" srcset="assets/images/cube2-desk.png" type="image/png" />
 
 							<source media="(min-width: 460px)" srcset="assets/images/cube2-mob.png" type="image/png" />
 
-							<img class="hero__img" src="assets/images/cube2-mob.png" alt="dice" />
+							<img src="assets/images/cube2-mob.png" alt="dice" />
 						</picture>
 					</div>
 				</div>
 			</section>
 			<section class="quests">
 				<div class="container quests__container">
-					<h2 class="quests__title title">квести</h2>
+					<div class="wrapper">
+						<h2 class="quests__title title">квести</h2>
+						<picture class="quests__ribbon">
+							<source media="(min-width: 1920px)" srcset="assets/images/ribbon1-desk.png" type="image/png" />
+							<source media="(min-width: 460px)" srcset="assets/images/ribbon1-mob.png" type="image/png" />
+							<img src="assets/images/ribbon1-mob.png" alt="ribbon" />
+						</picture>
+					</div>
+
 					<p class="quests__description description">роби спіни у слотах і отримуй бонуси</p>
 
 					<div class="quests__decoration">
@@ -54,7 +67,7 @@
 
 							<source media="(min-width: 460px)" srcset="assets/images/luster-mob.png" type="image/png" />
 
-							<img class="quests__img" src="assets/images/luster-mob.png" alt="luster" />
+							<img src="assets/images/luster-mob.png" alt="luster" />
 						</picture>
 
 						<picture class="quests__pic quests__pic--right">
@@ -62,12 +75,8 @@
 
 							<source media="(min-width: 460px)" srcset="assets/images/luster-mob.png" type="image/png" />
 
-							<img class="quests__img" src="assets/images/luster-mob.png" alt="luster" />
-						</picture>
-					</div>
-
-					<div class="quests__swiper swiper">
-						<button class="quests__button quests__button--prev" type="button">
+							<img src="assets/images/luster-mob.png" alt="luster" /> </picture
+						><button class="quests__button quests__button--prev" type="button">
 							<svg class="quests__icon icon" width="18" height="28">
 								<use href="assets/images/sprite.svg#arrow-left"></use>
 							</svg>
@@ -78,7 +87,9 @@
 								<use href="assets/images/sprite.svg#arrow-right"></use>
 							</svg>
 						</button>
+					</div>
 
+					<div class="quests__swiper swiper">
 						<div class="quests__wrapper swiper-wrapper">
 							<div class="slide swiper-slide">
 								<div class="slide__content">
@@ -134,21 +145,33 @@
 			</section>
 			<section class="bonuses">
 				<div class="bonuses__container container">
-					<div class="bonuses__wrapper">
+					<div class="wrapper">
+						<picture class="bonuses__ribbon">
+							<source media="(min-width: 1920px)" srcset="assets/images/ribbon2-desk.png" type="image/png" />
+							<source media="(min-width: 460px)" srcset="assets/images/ribbon2-mob.png" type="image/png" />
+							<img src="assets/images/ribbon2-mob.png" alt="dice" />
+						</picture>
 						<h2 class="bonuses__title title">бонуси</h2>
+
 						<p class="bonuses__description description">Отримай свою винагороду за депозит</p>
-						<picture class="bonuses__pic">
-							<source media="(min-width: 1920px)" srcset="assets/images/jester.png" type="image/png" />
-							<img class="bonuses__img" src="assets/images/jester.png" alt="dice" />
-						</picture>
-						<picture class="bonuses__pic">
-							<source media="(min-width: 1920px)" srcset="assets/images/girl-dance.png" type="image/png" />
-							<img class="bonuses__img" src="assets/images/girl-dance.png" alt="dice" />
-						</picture>
-						<picture class="bonuses__pic">
-							<source media="(min-width: 1920px)" srcset="assets/images/lovers-dance.png" type="image/png" />
-							<img class="bonuses__img" src="assets/images/lovers-dance.png" alt="dice" />
-						</picture>
+						<div class="bonuses__decoration">
+							<picture class="bonuses__pic">
+								<source media="(min-width: 1920px)" srcset="assets/images/jester.png" type="image/png" />
+								<img class="bonuses__img" src="assets/images/jester.png" alt="dice" />
+							</picture>
+							<picture class="bonuses__pic">
+								<source media="(min-width: 1920px)" srcset="assets/images/girl-dance.png" type="image/png" />
+								<img class="bonuses__img" src="assets/images/girl-dance.png" alt="dice" />
+							</picture>
+							<picture class="bonuses__pic">
+								<source
+									media="(min-width: 1920px)"
+									srcset="assets/images/lovers-dance.png"
+									type="image/png"
+								/>
+								<img class="bonuses__img" src="assets/images/lovers-dance.png" alt="dice" />
+							</picture>
+						</div>
 					</div>
 
 					<div class="bonuses__content">
@@ -251,7 +274,15 @@
 			</section>
 			<section class="tournament">
 				<div class="tournament__container container">
-					<h2 class="tournament__title title">турнір</h2>
+					<div class="wrapper">
+						<h2 class="tournament__title title">турнір</h2>
+						<picture class="tournament__ribbon">
+							<source media="(min-width: 1920px)" srcset="assets/images/ribbon3-desk.png" type="image/png" />
+							<source media="(min-width: 460px)" srcset="assets/images/ribbon3-mob.png" type="image/png" />
+							<img src="assets/images/ribbon3-mob.png" alt="dice" />
+						</picture>
+					</div>
+
 					<p class="tournament__description description">позмагайся в турнірі за</p>
 					<span class="tournament__span">
 						<span class="tournament__description description tournament__description--lg">50</span>
@@ -315,7 +346,15 @@
 			</section>
 			<section class="drawing">
 				<div class="drawing__container container">
-					<h2 class="drawing__title title">розіграш</h2>
+					<div class="wrapper">
+						<h2 class="drawing__title title">розіграш</h2>
+						<picture class="drawing__ribbon">
+							<source media="(min-width: 1920px)" srcset="assets/images/ribbon4-desk.png" type="image/png" />
+							<source media="(min-width: 460px)" srcset="assets/images/ribbon4-mob.png" type="image/png" />
+							<img src="assets/images/ribbon4-mob.png" alt="dice" />
+						</picture>
+					</div>
+
 					<div class="letter">
 						<picture class="letter__pic">
 							<source media="(min-width: 460px)" srcset="assets/images/letter-mob.png" type="image/png" />

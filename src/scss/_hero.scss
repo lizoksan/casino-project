@@ -6,13 +6,13 @@
 
 	@include mq('desktop', max) {
 		padding: 4.8rem 0 6.7rem;
-
+		background-position: bottom;
 		@include bg('../assets/images/hero-mob.jpg');
 	}
 
 	@include mq('desktop') {
-		padding: 12.5rem 0 6rem;
-
+		padding: 12.5rem 0 9rem;
+		background-position: right;
 		@include bg('../assets/images/hero-desk.jpg');
 	}
 }
@@ -78,15 +78,32 @@
 	}
 }
 
-.hero__pic {
-	position: absolute;
-	animation: levitate 3s infinite ease-in-out 0s;
+.hero__picture {
+	@include mq('desktop', max) {
+		position: absolute;
+		bottom: -16%;
+		left: 50%;
+		transform: translate(-53.7%, 0);
+
+		width: 63.6rem;
+		height: 47.7rem;
+	}
+
+	@include mq('desktop') {
+		display: none;
+	}
 }
 
-.hero__pic--big {
+.hero__cube {
+	animation: levitate 3s infinite ease-in-out 0s;
+	position: absolute;
+}
+
+.hero__cube--big {
 	@include mq('desktop', max) {
 		bottom: -8.2rem;
 		left: -1.1rem;
+
 		width: 18rem;
 		height: 18rem;
 	}
@@ -99,7 +116,8 @@
 	}
 }
 
-.hero__pic--small {
+.hero__cube--small {
+	z-index: 5;
 	@include mq('desktop', max) {
 		bottom: -6.3rem;
 		right: 1.2rem;

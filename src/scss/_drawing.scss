@@ -11,7 +11,7 @@
 	}
 
 	@include mq('desktop') {
-		padding: 5.7rem 0 31.5rem;
+		padding: 5.7rem 0 30.5rem;
 
 		@include bg('../assets/images/letter-desk.jpg');
 	}
@@ -20,6 +20,27 @@
 .drawing__container {
 	@include mq('desktop') {
 		padding: 0 40.7rem;
+	}
+}
+
+.drawing__ribbon {
+	position: absolute;
+	z-index: -1;
+	@include mq('desktop', max) {
+		bottom: 0%;
+		left: 50%;
+		transform: translate(-52.1%, 79.6%);
+		width: 89.6rem;
+		height: 31.3rem;
+		// aspect-ratio: 916/276;
+	}
+
+	@include mq('desktop') {
+		bottom: 15%;
+		left: 50%;
+		transform: translate(-47.7%, 56.3%);
+		width: 225.2rem;
+		height: 58.6rem;
 	}
 }
 
@@ -37,7 +58,7 @@
 	position: relative;
 
 	@include mq('desktop', max) {
-		aspect-ratio: 460/360;
+		padding: 16.1rem 0;
 	}
 
 	@include mq('desktop') {
@@ -119,7 +140,7 @@
 	}
 
 	@include mq('desktop') {
-		margin: 2.2rem 0 2.8rem;
+		margin: 2.5rem 0 2.8rem;
 		max-width: 53rem;
 		text-align: left;
 		letter-spacing: 2%;
