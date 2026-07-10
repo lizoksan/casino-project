@@ -15,7 +15,9 @@
 }
 
 .bonuses__container {
-	max-width: 43.2rem;
+	@include mq('desktop') {
+		max-width: 129.4rem;
+	}
 	&::after {
 		content: '';
 		position: absolute;

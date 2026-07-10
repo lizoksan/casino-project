@@ -2,24 +2,38 @@
 @use 'mixins' as *;
 
 .drawing {
+	position: relative;
 	background-size: cover;
+	background-position: center;
 
 	@include mq('desktop', max) {
-		padding: 3.4rem 0 3rem;
-
-		@include bg('../assets/images/drawing-mob.jpg');
+		padding: 3.2rem 0 3rem;
+		@include bg('../assets/images/drawing-mob.png');
 	}
 
 	@include mq('desktop') {
-		padding: 5.7rem 0 30.5rem;
-
+		padding: 5.9rem 0 31rem;
 		@include bg('../assets/images/letter-desk.jpg');
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
+		width: 100%;
+		height: 5rem;
+		left: 0;
+		top: 0;
+		z-index: 1;
 	}
 }
 
 .drawing__container {
+	@include mq('desktop', max) {
+		max-width: 44rem;
+	}
 	@include mq('desktop') {
-		padding: 0 40.7rem;
+		max-width: 114.6em;
 	}
 }
 
@@ -32,7 +46,6 @@
 		transform: translate(-52.1%, 79.6%);
 		width: 89.6rem;
 		height: 31.3rem;
-		// aspect-ratio: 916/276;
 	}
 
 	@include mq('desktop') {
@@ -46,7 +59,7 @@
 
 .drawing__title {
 	@include mq('desktop', max) {
-		margin-bottom: 6.4rem;
+		margin-bottom: 38.7rem;
 	}
 
 	@include mq('desktop') {
@@ -54,15 +67,8 @@
 	}
 }
 
-.letter {
+.drawing__decoration {
 	position: relative;
-
-	@include mq('desktop', max) {
-		padding: 16.1rem 0;
-	}
-
-	@include mq('desktop') {
-	}
 }
 
 .drawing__info {
@@ -78,57 +84,34 @@
 	}
 }
 
-.letter__pic {
+.drawing__shine {
 	@include mq('desktop', max) {
-		position: absolute;
-		top: -7.3rem;
-		right: -2.4rem;
-
-		width: 46rem;
-		height: 51rem;
+		display: none;
 	}
 
 	@include mq('desktop') {
-		display: none;
+		position: absolute;
+		z-index: 3;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}
-}
-
-.letter__shine {
-	position: absolute;
-	z-index: 3;
-	animation: shine 8s ease-in-out 10s infinite;
 
 	&--big {
-		@include mq('desktop', max) {
-			top: -8.7rem;
-			right: 11rem;
-			width: 20.8rem;
-			height: 20.6rem;
-		}
-
-		@include mq('desktop') {
-			top: -32rem;
-			right: -1.4rem;
-			width: 43.5rem;
-			height: 43rem;
-		}
+		margin: -10.5rem 35.2rem 0rem;
+		width: 43.5rem;
+		height: 43rem;
 	}
 
 	&--small {
-		@include mq('desktop', max) {
-			top: 6rem;
-			right: 26rem;
-			width: 10.4rem;
-			height: 10.3rem;
-		}
-
-		@include mq('desktop') {
-			top: -2.1rem;
-			right: 28rem;
-			width: 25.5rem;
-			height: 25.5rem;
-		}
+		margin: 10.1rem 13.9rem 0rem;
+		width: 25.5rem;
+		height: 25.5rem;
 	}
+}
+
+.drawing__img {
+	animation: shine 8s ease-in-out 10s infinite;
 }
 
 .drawing__description {

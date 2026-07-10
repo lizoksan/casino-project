@@ -43,6 +43,10 @@ html {
 	}
 }
 
+picture {
+	pointer-events: none;
+}
+
 .container {
 	margin: 0 auto;
 	padding: 0 2rem;
@@ -161,6 +165,9 @@ html {
 }
 
 .button__wrapper {
+	filter: drop-shadow(0 0 0 transparent);
+	transition: filter 0.3s ease;
+
 	&:has(.button:hover) {
 		filter: drop-shadow(0 0 0.4rem rgba(254, 132, 83, 1)) drop-shadow(0 0 0.3rem rgba(255, 111, 54, 1));
 	}

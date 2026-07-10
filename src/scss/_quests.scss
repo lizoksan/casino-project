@@ -6,7 +6,7 @@
 	background-position: top;
 
 	@include mq('desktop', max) {
-		margin: -1.6rem 0 0;
+		margin: -7.1rem 0 0;
 		padding: 0.7rem 0 198.8rem;
 
 		@include bg('../assets/images/quests-mob.jpg');
@@ -190,7 +190,7 @@
 .slide__pic {
 	width: 37.2rem;
 	height: 47.6rem;
-
+	pointer-events: all;
 	transition: transform 0.3s ease-in-out;
 
 	&:hover {
