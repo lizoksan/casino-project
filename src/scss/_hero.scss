@@ -17,6 +17,16 @@
 	}
 }
 
+.hero__container {
+	@include mq('desktop', max) {
+		max-width: 47rem;
+	}
+
+	@include mq('desktop') {
+		max-width: 145.7rem;
+	}
+}
+
 .hero__content {
 	display: flex;
 	flex-direction: column;
@@ -95,22 +105,23 @@
 }
 
 .hero__cube {
-	animation: levitate 3s infinite ease-in-out 0s;
 	position: absolute;
+
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .hero__cube--big {
 	@include mq('desktop', max) {
-		bottom: -8.2rem;
-		left: -1.1rem;
+		margin: 20.3rem -12.6rem 0rem;
 
 		width: 18rem;
 		height: 18rem;
 	}
 
 	@include mq('desktop') {
-		bottom: -9rem;
-		left: 27.2rem;
+		margin: 4.5rem -28.7rem 0rem;
 		width: 29.6rem;
 		height: 28.9rem;
 	}
@@ -119,16 +130,18 @@
 .hero__cube--small {
 	z-index: 5;
 	@include mq('desktop', max) {
-		bottom: -6.3rem;
-		right: 1.2rem;
+		margin: 22.8rem 14.2rem 0rem;
 		width: 10.5rem;
 		height: 9rem;
 	}
 
 	@include mq('desktop') {
-		bottom: -10.3rem;
-		right: 0.4rem;
+		margin: 11.8rem 60.4rem 0rem;
 		width: 19.8rem;
 		height: 17rem;
 	}
+}
+
+.hero__deco {
+	animation: levitate 3s infinite ease-in-out 0s;
 }

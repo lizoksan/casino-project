@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const swiper = new Swiper('.quests__swiper', {
 		modules: [Navigation],
 
-		spaceBetween: 89,
+		spaceBetween: 250,
 		loop: true,
 
 		navigation: {

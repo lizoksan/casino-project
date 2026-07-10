@@ -15,14 +15,7 @@
 }
 
 .bonuses__container {
-	@include mq('desktop', max) {
-		padding: 0 3.4rem;
-	}
-
-	@include mq('desktop') {
-		padding: 0 33.3rem;
-	}
-
+	max-width: 43.2rem;
 	&::after {
 		content: '';
 		position: absolute;
@@ -93,7 +86,7 @@
 	@include mq('desktop') {
 		position: absolute;
 
-		animation: dance 6s infinite ease-in-out 2s;
+		// animation: dance 6s infinite ease-in-out 2s;
 	}
 
 	&:first-of-type {
@@ -117,7 +110,7 @@
 	&:nth-of-type(3) {
 		@include mq('desktop') {
 			top: -1rem;
-			left: 94.6rem;
+			right: -47.7rem;
 			width: 78.5rem;
 			height: 105.7rem;
 		}
@@ -131,6 +124,7 @@
 	@include mq('desktop', max) {
 		gap: 3.7rem;
 		margin: 0 auto;
+		align-items: center;
 	}
 
 	@include mq('desktop') {
@@ -151,14 +145,14 @@
 
 	@include mq('desktop', max) {
 		align-items: center;
-		padding: 59% 0 2%;
+		padding: 23rem 46px 4rem;
 		aspect-ratio: 392/542;
-		max-width: 39.2rem;
 	}
 
 	@include mq('desktop') {
 		padding: 4.1rem 40rem 3.8rem 6.9rem;
 		aspect-ratio: 1253/341;
+		min-height: 34.1rem;
 	}
 
 	&:first-child {

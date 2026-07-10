@@ -95,8 +95,8 @@
 
 .letter__shine {
 	position: absolute;
-
-	animation: shine 6s ease-in-out 10s infinite;
+	z-index: 3;
+	animation: shine 8s ease-in-out 10s infinite;
 
 	&--big {
 		@include mq('desktop', max) {
@@ -123,10 +123,10 @@
 		}
 
 		@include mq('desktop') {
-			top: -100rem;
-			right: 30rem;
-			width: 20.4rem;
-			height: 20.3rem;
+			top: -2.1rem;
+			right: 28rem;
+			width: 25.5rem;
+			height: 25.5rem;
 		}
 	}
 }

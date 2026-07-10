@@ -13,7 +13,7 @@
 	<body>
 		<main>
 			<section class="hero">
-				<div class="container">
+				<div class="hero__container container">
 					<div class="hero__content">
 						<svg class="logo icon">
 							<use href="assets/images/sprite.svg#logo"></use>
@@ -26,24 +26,18 @@
 
 					<div class="hero__decoration">
 						<picture class="hero__picture">
-							<source media="(min-width: 460px)" srcset="assets/images/man-mobile.png" type="image/png" />
-
 							<img src="assets/images/man-mobile.png" alt="dice" />
 						</picture>
 
 						<picture class="hero__cube hero__cube--big">
-							<source media="(min-width: 1920px)" srcset="assets/images/cube1-desk.png" type="image/png" />
+							<source media="(min-width: 1024px)" srcset="assets/images/cube1-desk.png" type="image/png" />
 
-							<source media="(min-width: 460px)" srcset="assets/images/cube1-mob.png" type="image/png" />
-
-							<img src="assets/images/cube1-mob.png" alt="dice" />
+							<img class="hero__deco" src="assets/images/cube1-mob.png" alt="dice" />
 						</picture>
 						<picture class="hero__cube hero__cube--small">
-							<source media="(min-width: 1920px)" srcset="assets/images/cube2-desk.png" type="image/png" />
+							<source media="(min-width: 1024px)" srcset="assets/images/cube2-desk.png" type="image/png" />
 
-							<source media="(min-width: 460px)" srcset="assets/images/cube2-mob.png" type="image/png" />
-
-							<img src="assets/images/cube2-mob.png" alt="dice" />
+							<img class="hero__deco" src="assets/images/cube2-mob.png" alt="dice" />
 						</picture>
 					</div>
 				</div>
@@ -53,8 +47,7 @@
 					<div class="wrapper">
 						<h2 class="quests__title title">квести</h2>
 						<picture class="quests__ribbon">
-							<source media="(min-width: 1920px)" srcset="assets/images/ribbon1-desk.png" type="image/png" />
-							<source media="(min-width: 460px)" srcset="assets/images/ribbon1-mob.png" type="image/png" />
+							<source media="(min-width: 1024px)" srcset="assets/images/ribbon1-desk.png" type="image/png" />
 							<img src="assets/images/ribbon1-mob.png" alt="ribbon" />
 						</picture>
 					</div>
@@ -63,17 +56,13 @@
 
 					<div class="quests__decoration">
 						<picture class="quests__pic quests__pic--left">
-							<source media="(min-width: 1920px)" srcset="assets/images/luster-desk.png" type="image/png" />
-
-							<source media="(min-width: 460px)" srcset="assets/images/luster-mob.png" type="image/png" />
+							<source media="(min-width: 1024px)" srcset="assets/images/luster-desk.png" type="image/png" />
 
 							<img src="assets/images/luster-mob.png" alt="luster" />
 						</picture>
 
 						<picture class="quests__pic quests__pic--right">
-							<source media="(min-width: 1920px)" srcset="assets/images/luster-desk.png" type="image/png" />
-
-							<source media="(min-width: 460px)" srcset="assets/images/luster-mob.png" type="image/png" />
+							<source media="(min-width: 1024px)" srcset="assets/images/luster-desk.png" type="image/png" />
 
 							<img src="assets/images/luster-mob.png" alt="luster" /> </picture
 						><button class="quests__button quests__button--prev" type="button">
@@ -94,7 +83,6 @@
 							<div class="slide swiper-slide">
 								<div class="slide__content">
 									<picture class="slide__pic">
-										<source media="(min-width: 460px)" srcset="assets/images/woman-1.png" type="image/png" />
 										<img class="slide__img" src="assets/images/woman-1.png" alt="woman" />
 									</picture>
 									<div class="calendar">
@@ -110,7 +98,6 @@
 							<div class="slide swiper-slide">
 								<div class="slide__content">
 									<picture class="slide__pic">
-										<source media="(min-width: 460px)" srcset="assets/images/woman-2.png" type="image/png" />
 										<img class="slide__img" src="assets/images/woman-2.png" alt="woman" />
 									</picture>
 									<div class="calendar">
@@ -126,7 +113,6 @@
 							<div class="slide swiper-slide">
 								<div class="slide__content">
 									<picture class="slide__pic">
-										<source media="(min-width: 460px)" srcset="assets/images/woman-3.png" type="image/png" />
 										<img class="slide__img" src="assets/images/woman-3.png" alt="woman" />
 									</picture>
 									<div class="calendar">
@@ -147,8 +133,7 @@
 				<div class="bonuses__container container">
 					<div class="wrapper">
 						<picture class="bonuses__ribbon">
-							<source media="(min-width: 1920px)" srcset="assets/images/ribbon2-desk.png" type="image/png" />
-							<source media="(min-width: 460px)" srcset="assets/images/ribbon2-mob.png" type="image/png" />
+							<source media="(min-width: 1024px)" srcset="assets/images/ribbon2-desk.png" type="image/png" />
 							<img src="assets/images/ribbon2-mob.png" alt="dice" />
 						</picture>
 						<h2 class="bonuses__title title">бонуси</h2>
@@ -156,16 +141,16 @@
 						<p class="bonuses__description description">Отримай свою винагороду за депозит</p>
 						<div class="bonuses__decoration">
 							<picture class="bonuses__pic">
-								<source media="(min-width: 1920px)" srcset="assets/images/jester.png" type="image/png" />
+								<source media="(min-width: 1024px)" srcset="assets/images/jester.png" type="image/png" />
 								<img class="bonuses__img" src="assets/images/jester.png" alt="dice" />
 							</picture>
 							<picture class="bonuses__pic">
-								<source media="(min-width: 1920px)" srcset="assets/images/girl-dance.png" type="image/png" />
+								<source media="(min-width: 1024px)" srcset="assets/images/girl-dance.png" type="image/png" />
 								<img class="bonuses__img" src="assets/images/girl-dance.png" alt="dice" />
 							</picture>
 							<picture class="bonuses__pic">
 								<source
-									media="(min-width: 1920px)"
+									media="(min-width: 1024px)"
 									srcset="assets/images/lovers-dance.png"
 									type="image/png"
 								/>
@@ -183,11 +168,7 @@
 										srcset="assets/images/coctail-1-desk.jpg"
 										type="image/jpg"
 									/>
-									<source
-										media="(min-width: 460px)"
-										srcset="assets/images/coctail-1-mob.png"
-										type="image/png"
-									/>
+
 									<img
 										class="card__img"
 										src="assets/images/coctail-1-mob.png"
@@ -215,11 +196,7 @@
 										srcset="assets/images/coctail-2-desk.jpg"
 										type="image/jpg"
 									/>
-									<source
-										media="(min-width: 460px)"
-										srcset="assets/images/coctail-2-mob.png"
-										type="image/png"
-									/>
+
 									<img
 										class="card__img"
 										src="assets/images/coctail-2-mob.png"
@@ -245,11 +222,7 @@
 										srcset="assets/images/coctail-3-desk.jpg"
 										type="image/jpg"
 									/>
-									<source
-										media="(min-width: 460px)"
-										srcset="assets/images/coctail-3-mob.png"
-										type="image/png"
-									/>
+
 									<img
 										class="card__img"
 										src="assets/images/coctail-3-mob.png"
@@ -277,8 +250,7 @@
 					<div class="wrapper">
 						<h2 class="tournament__title title">турнір</h2>
 						<picture class="tournament__ribbon">
-							<source media="(min-width: 1920px)" srcset="assets/images/ribbon3-desk.png" type="image/png" />
-							<source media="(min-width: 460px)" srcset="assets/images/ribbon3-mob.png" type="image/png" />
+							<source media="(min-width: 1024px)" srcset="assets/images/ribbon3-desk.png" type="image/png" />
 							<img src="assets/images/ribbon3-mob.png" alt="dice" />
 						</picture>
 					</div>
@@ -293,42 +265,36 @@
 						<li class="tournament__item">
 							<picture class="tournament__pic">
 								<source media="(min-width: 1024px)" srcset="assets/images/mask-1-desk.png" type="image/png" />
-								<source media="(min-width: 460px)" srcset="assets/images/mask-1-mob.png" type="image/png" />
 								<img class="tournament__img" src="assets/images/mask-1-mob.png" alt="carnival mask" />
 							</picture>
 						</li>
 						<li class="tournament__item">
 							<picture class="tournament__pic">
 								<source media="(min-width: 1024px)" srcset="assets/images/mask-2-desk.png" type="image/png" />
-								<source media="(min-width: 460px)" srcset="assets/images/mask-2-mob.png" type="image/png" />
 								<img class="tournament__img" src="assets/images/mask-2-mob.png" alt="carnival mask" />
 							</picture>
 						</li>
 						<li class="tournament__item">
 							<picture class="tournament__pic">
 								<source media="(min-width: 1024px)" srcset="assets/images/mask-3-desk.png" type="image/png" />
-								<source media="(min-width: 460px)" srcset="assets/images/mask-3-mob.png" type="image/png" />
 								<img class="tournament__img" src="assets/images/mask-3-mob.png" alt="carnival mask" />
 							</picture>
 						</li>
 						<li class="tournament__item">
 							<picture class="tournament__pic">
 								<source media="(min-width: 1024px)" srcset="assets/images/chip-1-desk.png" type="image/png" />
-								<source media="(min-width: 460px)" srcset="assets/images/chip-1-mob.png" type="image/png" />
 								<img class="tournament__img" src="assets/images/chip-1-mob.png" alt="chip" />
 							</picture>
 						</li>
 						<li class="tournament__item">
 							<picture class="tournament__pic">
 								<source media="(min-width: 1024px)" srcset="assets/images/chip-2-desk.png" type="image/png" />
-								<source media="(min-width: 460px)" srcset="assets/images/chip-2-mob.png" type="image/png" />
 								<img class="tournament__img" src="assets/images/chip-2-mob.png" alt="chip" />
 							</picture>
 						</li>
 						<li class="tournament__item">
 							<picture class="tournament__pic">
 								<source media="(min-width: 1024px)" srcset="assets/images/coin-1-desk.png" type="image/png" />
-								<source media="(min-width: 460px)" srcset="assets/images/coin-1-mob.png" type="image/png" />
 								<img class="tournament__img" src="assets/images/coin-1-mob.png" alt="golden coin" />
 							</picture>
 						</li>
@@ -349,27 +315,23 @@
 					<div class="wrapper">
 						<h2 class="drawing__title title">розіграш</h2>
 						<picture class="drawing__ribbon">
-							<source media="(min-width: 1920px)" srcset="assets/images/ribbon4-desk.png" type="image/png" />
-							<source media="(min-width: 460px)" srcset="assets/images/ribbon4-mob.png" type="image/png" />
+							<source media="(min-width: 1024px)" srcset="assets/images/ribbon4-desk.png" type="image/png" />
 							<img src="assets/images/ribbon4-mob.png" alt="dice" />
 						</picture>
 					</div>
 
 					<div class="letter">
 						<picture class="letter__pic">
-							<source media="(min-width: 460px)" srcset="assets/images/letter-mob.png" type="image/png" />
 							<img class="letter__img" src="assets/images/letter-mob.png" alt="letter" />
 						</picture>
 
 						<picture class="letter__shine letter__shine--big">
 							<source media="(min-width: 1024px)" srcset="assets/images/shine1-desk.png" type="image/png" />
-							<source media="(min-width: 460px)" srcset="assets/images/shine1-mob.png" type="image/png" />
 							<img class="letter__img" src="assets/images/shine1-mob.png" alt="letter" />
 						</picture>
 
 						<picture class="letter__shine letter__shine--small">
 							<source media="(min-width: 1024px)" srcset="assets/images/shine2-mob.png" type="image/png" />
-							<source media="(min-width: 460px)" srcset="assets/images/shine2-mob.png" type="image/png" />
 							<img class="letter__img" src="assets/images/shine2-mob.png" alt="letter" />
 						</picture>
 					</div>
