@@ -7,13 +7,11 @@
 
 	@include mq('desktop', max) {
 		padding: 3.3rem 0 2.7rem;
-
 		@include bg('../assets/images/tournament-mob.jpg');
 	}
 
 	@include mq('desktop') {
 		padding: 0.1rem 0 4.8rem;
-
 		@include bg('../assets/images/tournament-desk.jpg');
 	}
 
@@ -85,13 +83,6 @@
 }
 
 .tournament__description {
-	@include mq('desktop', max) {
-		// margin-bottom: 3.8rem;
-	}
-
-	@include mq('desktop') {
-	}
-
 	&.tournament__description--lg {
 		display: inline-block;
 
@@ -238,7 +229,6 @@
 .tournament__info {
 	display: flex;
 	flex-direction: column;
-
 	align-items: center;
 
 	@include mq('desktop', max) {

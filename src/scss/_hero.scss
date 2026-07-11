@@ -5,7 +5,6 @@
 	background-size: cover;
 
 	@include mq('desktop', max) {
-		// padding: 4.8rem 0 6.7rem;
 		padding: 4.8rem 0 12.2rem;
 		background-position: bottom;
 		@include bg('../assets/images/hero-mob.jpg');
@@ -107,7 +106,6 @@
 
 .hero__cube {
 	position: absolute;
-
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -116,7 +114,6 @@
 .hero__cube--big {
 	@include mq('desktop', max) {
 		margin: 20.3rem -12.6rem 0rem;
-
 		width: 18rem;
 		height: 18rem;
 	}

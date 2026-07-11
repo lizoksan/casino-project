@@ -64,9 +64,10 @@ function svgSpritePlugin() {
 				res.setHeader('Content-Type', 'image/svg+xml');
 				res.end(spriteCache);
 			});
-			server.watcher.add(path.resolve('src/assets/icons'));
+			const iconsDir = path.resolve('src/assets/icons');
+			server.watcher.add(iconsDir);
 			const invalidateSprite = (file) => {
-				if (!file.includes('src/assets/icons')) return;
+				if (!path.resolve(file).startsWith(iconsDir)) return;
 				spriteCache = null;
 				server.ws.send({ type: 'full-reload' });
 			};
