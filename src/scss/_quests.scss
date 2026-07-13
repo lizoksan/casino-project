@@ -2,70 +2,33 @@
 @use 'mixins' as *;
 
 .quests {
-	background-size: cover;
-	background-position: top;
+	position: relative;
 
 	@include mq('desktop', max) {
-		margin: -7.1rem 0 0;
-		padding: 0.7rem 0 198.8rem;
-
-		@include bg('../assets/images/quests-mob.jpg');
+		padding: 0.8rem 0 5rem;
 	}
 
 	@include mq('desktop') {
-		padding: 2rem 0 158.8rem;
-		margin: -4rem 0 0;
-
-		@include bg('../assets/images/quests-desk.jpg');
-	}
-}
-
-.quests__container {
-	@include mq('desktop', max) {
-		max-width: 43.2rem;
-	}
-
-	@include mq('desktop') {
-		max-width: 131.6rem;
+		padding: 2rem 0 8rem;
 	}
 }
 
 .quests__ribbon {
 	position: absolute;
+	transform: translate(-50%, 0%);
 
 	@include mq('desktop', max) {
-		bottom: 0%;
-		left: 50%;
-		transform: translate(-47.7%, 35.1%);
+		bottom: 85.1%;
+		left: 54.6%;
 		width: 91.6rem;
 		height: 27.6rem;
 	}
 
 	@include mq('desktop') {
-		bottom: 15%;
+		bottom: 76%;
 		left: 50%;
-		transform: translate(-50%, 36.3%);
 		width: 192.1rem;
 		height: 44.8rem;
-	}
-
-	&::after {
-		content: '';
-		position: absolute;
-		background: linear-gradient(180deg, rgba(210, 228, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
-		width: 100%;
-		left: 0;
-		z-index: -1;
-
-		@include mq('desktop', max) {
-			top: 11rem;
-			height: 5rem;
-		}
-
-		@include mq('desktop') {
-			top: 24rem;
-			height: 5rem;
-		}
 	}
 }
 
@@ -90,10 +53,6 @@
 	@include mq('desktop') {
 		margin-bottom: 2.9rem;
 	}
-}
-
-.quests__decoration {
-	position: relative;
 }
 
 .quests__pic {
@@ -147,7 +106,7 @@
 
 		border: none;
 		border-radius: 50%;
-		background-color: $gray-transparent10;
+		background-color: $gray-transparent;
 		backdrop-filter: blur(1.4rem);
 		cursor: pointer;
 	}
@@ -174,7 +133,6 @@
 .slide__content {
 	display: flex;
 	flex-direction: column;
-
 	align-items: center;
 }
 
@@ -189,14 +147,20 @@
 	}
 }
 
+.slide__calendar {
+	margin-bottom: 2rem;
+}
+
 .slide__img {
 	min-width: 37.2rem;
 }
 
 .slide__subtitle {
-	margin: 2rem 0 2.9rem;
+	margin-bottom: 2.9rem;
 	font-size: 3.2rem;
-	line-height: 0.9;
-
+	line-height: 0.9em;
+	font-family: $font-klapt;
+	text-transform: uppercase;
+	font-weight: 800;
 	text-align: center;
 }

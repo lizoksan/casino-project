@@ -15,9 +15,12 @@
 			<section class="hero">
 				<div class="hero__container container">
 					<div class="hero__content">
-						<svg class="logo">
-							<use href="assets/images/sprite.svg#logo"></use>
-						</svg>
+						<a href="./index.html">
+							<svg class="logo">
+								<use href="assets/images/sprite.svg#logo"></use>
+							</svg>
+						</a>
+
 						<h1 class="hero__title title">карнавал пристрасті</h1>
 						<p class="hero__description description">
 							Спробуй спеціальні бонуси, ігрові квести і казино турніри
@@ -29,12 +32,12 @@
 							<img src="assets/images/man-mobile.png" alt="dice" />
 						</picture>
 
-						<picture class="hero__cube hero__cube--big">
+						<picture class="hero__cube hero__cube--lg">
 							<source media="(min-width: 1024px)" srcset="assets/images/cube1-desk.png" type="image/png" />
 
 							<img class="hero__deco" src="assets/images/cube1-mob.png" alt="dice" />
 						</picture>
-						<picture class="hero__cube hero__cube--small">
+						<picture class="hero__cube hero__cube--sm">
 							<source media="(min-width: 1024px)" srcset="assets/images/cube2-desk.png" type="image/png" />
 
 							<img class="hero__deco" src="assets/images/cube2-mob.png" alt="dice" />
@@ -42,103 +45,96 @@
 					</div>
 				</div>
 			</section>
-			<section class="quests">
-				<div class="container quests__container">
-					<div class="wrapper">
-						<h2 class="quests__title title">квести</h2>
+			<div class="section_bg">
+				<section class="quests">
+					<div class="container">
 						<picture class="quests__ribbon">
 							<source media="(min-width: 1024px)" srcset="assets/images/ribbon1-desk.png" type="image/png" />
 							<img src="assets/images/ribbon1-mob.png" alt="ribbon" />
 						</picture>
-					</div>
 
-					<p class="quests__description description">роби спіни у слотах і отримуй бонуси</p>
+						<h2 class="quests__title title">квести</h2>
+						<p class="quests__description description">роби спіни у слотах і отримуй бонуси</p>
 
-					<div class="quests__decoration">
-						<picture class="quests__pic quests__pic--left">
-							<source media="(min-width: 1024px)" srcset="assets/images/luster-desk.png" type="image/png" />
+						<div class="quests__swiper swiper">
+							<button class="quests__button quests__button--prev" type="button">
+								<svg class="quests__icon" width="18" height="28">
+									<use href="assets/images/sprite.svg#arrow-left"></use>
+								</svg>
+							</button>
+							<button class="quests__button quests__button--next" type="button">
+								<svg class="quests__icon" width="18" height="28">
+									<use href="assets/images/sprite.svg#arrow-right"></use>
+								</svg>
+							</button>
 
-							<img src="assets/images/luster-mob.png" alt="luster" />
-						</picture>
+							<div class="quests__wrapper swiper-wrapper">
+								<div class="slide swiper-slide">
+									<div class="slide__content">
+										<picture class="slide__pic">
+											<img class="slide__img" src="assets/images/woman-1.png" alt="woman" />
+										</picture>
 
-						<picture class="quests__pic quests__pic--right">
-							<source media="(min-width: 1024px)" srcset="assets/images/luster-desk.png" type="image/png" />
+										<div class="slide__calendar">
+											<div class="calendar">
+												<svg class="calendar__icon" width="23.23" height="23.23">
+													<use href="assets/icons/calendar.svg"></use>
+												</svg>
+												<p class="calendar__date">05.02 – 8.02</p>
+											</div>
+										</div>
 
-							<img src="assets/images/luster-mob.png" alt="luster" /> </picture
-						><button class="quests__button quests__button--prev" type="button">
-							<svg class="quests__icon" width="18" height="28">
-								<use href="assets/images/sprite.svg#arrow-left"></use>
-							</svg>
-						</button>
-
-						<button class="quests__button quests__button--next" type="button">
-							<svg class="quests__icon" width="18" height="28">
-								<use href="assets/images/sprite.svg#arrow-right"></use>
-							</svg>
-						</button>
-					</div>
-
-					<div class="quests__swiper swiper">
-						<div class="quests__wrapper swiper-wrapper">
-							<div class="slide swiper-slide">
-								<div class="slide__content">
-									<picture class="slide__pic">
-										<img class="slide__img" src="assets/images/woman-1.png" alt="woman" />
-									</picture>
-									<div class="calendar">
-										<svg class="calendar__icon" width="23.23" height="23.23">
-											<use href="assets/icons/calendar.svg"></use>
-										</svg>
-										<p class="calendar__date">05.02 – 8.02</p>
+										<h3 class="slide__subtitle">Квест Загадкової Блондинки</h3>
+										<div class="button__wrapper"><a class="button" href="./index.html">детальніше</a></div>
 									</div>
-									<h3 class="slide__subtitle">Квест Загадкової Блондинки</h3>
-									<div class="button__wrapper"><a class="button" href="./index.html">детальніше</a></div>
 								</div>
-							</div>
-							<div class="slide swiper-slide">
-								<div class="slide__content">
-									<picture class="slide__pic">
-										<img class="slide__img" src="assets/images/woman-2.png" alt="woman" />
-									</picture>
-									<div class="calendar">
-										<svg class="calendar__icon" width="23.23" height="23.23">
-											<use href="assets/icons/calendar.svg"></use>
-										</svg>
-										<p class="calendar__date">12.02 – 15.02</p>
+								<div class="slide swiper-slide">
+									<div class="slide__content">
+										<picture class="slide__pic">
+											<img class="slide__img" src="assets/images/woman-2.png" alt="woman" />
+										</picture>
+										<div class="slide__calendar">
+											<div class="calendar">
+												<svg class="calendar__icon" width="23.23" height="23.23">
+													<use href="assets/icons/calendar.svg"></use>
+												</svg>
+												<p class="calendar__date">12.02 – 15.02</p>
+											</div>
+										</div>
+
+										<h3 class="slide__subtitle">Квест Чарівної Незнайомки</h3>
+										<div class="button__wrapper"><a class="button" href="./index.html">детальніше</a></div>
 									</div>
-									<h3 class="slide__subtitle">Квест Чарівної Незнайомки</h3>
-									<div class="button__wrapper"><a class="button" href="./index.html">детальніше</a></div>
 								</div>
-							</div>
-							<div class="slide swiper-slide">
-								<div class="slide__content">
-									<picture class="slide__pic">
-										<img class="slide__img" src="assets/images/woman-3.png" alt="woman" />
-									</picture>
-									<div class="calendar">
-										<svg class="calendar__icon" width="23.23" height="23.23">
-											<use href="assets/images/sprite.svg#calendar"></use>
-										</svg>
-										<p class="calendar__date">19.02 – 22.02</p>
+								<div class="slide swiper-slide">
+									<div class="slide__content">
+										<picture class="slide__pic">
+											<img class="slide__img" src="assets/images/woman-3.png" alt="woman" />
+										</picture>
+										<div class="slide__calendar">
+											<div class="calendar">
+												<svg class="calendar__icon" width="23.23" height="23.23">
+													<use href="assets/images/sprite.svg#calendar"></use>
+												</svg>
+												<p class="calendar__date">19.02 – 22.02</p>
+											</div>
+										</div>
+
+										<h3 class="slide__subtitle">Квест Таємничої Леді</h3>
+										<div class="button__wrapper"><a class="button" href="./index.html">детальніше</a></div>
 									</div>
-									<h3 class="slide__subtitle">Квест Таємничої Леді</h3>
-									<div class="button__wrapper"><a class="button" href="./index.html">детальніше</a></div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			</section>
-			<section class="bonuses">
-				<div class="bonuses__container container">
-					<div class="wrapper">
+				</section>
+				<section class="bonuses">
+					<div class="bonuses__container container">
 						<picture class="bonuses__ribbon">
 							<source media="(min-width: 1024px)" srcset="assets/images/ribbon2-desk.png" type="image/png" />
 							<img src="assets/images/ribbon2-mob.png" alt="dice" />
 						</picture>
-						<h2 class="bonuses__title title">бонуси</h2>
 
-						<p class="bonuses__description description">Отримай свою винагороду за депозит</p>
 						<div class="bonuses__decoration">
 							<picture class="bonuses__pic">
 								<source media="(min-width: 1024px)" srcset="assets/images/jester.png" type="image/png" />
@@ -157,9 +153,10 @@
 								<img class="bonuses__img" src="assets/images/lovers-dance.png" alt="dice" />
 							</picture>
 						</div>
-					</div>
 
-					<div class="bonuses__content">
+						<h2 class="bonuses__title title">бонуси</h2>
+						<p class="bonuses__description description">Отримай свою винагороду за депозит</p>
+
 						<ul class="bonuses__cards">
 							<li class="card">
 								<picture class="card__pic">
@@ -176,12 +173,15 @@
 									/>
 								</picture>
 								<div class="card__info">
-									<div class="calendar">
-										<svg class="calendar__icon" width="23.23" height="23.23">
-											<use href="assets/images/sprite.svg#calendar"></use>
-										</svg>
-										<p class="calendar__date">05.02 – 12.02</p>
+									<div class="card__calendar">
+										<div class="calendar">
+											<svg class="calendar__icon" width="23.23" height="23.23">
+												<use href="assets/images/sprite.svg#calendar"></use>
+											</svg>
+											<p class="calendar__date">05.02 – 12.02</p>
+										</div>
 									</div>
+
 									<h3 class="card__title title">
 										<span class="card__span">коктель</span> “королівська вдача”
 									</h3>
@@ -204,11 +204,13 @@
 									/>
 								</picture>
 								<div class="card__info">
-									<div class="calendar">
-										<svg class="calendar__icon" width="23.23" height="23.23">
-											<use href="assets/images/sprite.svg#calendar"></use>
-										</svg>
-										<p class="calendar__date">11.02 - 18.02</p>
+									<div class="card__calendar">
+										<div class="calendar">
+											<svg class="calendar__icon" width="23.23" height="23.23">
+												<use href="assets/images/sprite.svg#calendar"></use>
+											</svg>
+											<p class="calendar__date">11.02-18.02</p>
+										</div>
 									</div>
 									<h3 class="card__title title"><span class="card__span">коктель</span> “вишневе кохання”</h3>
 									<h4 class="card__subtitle">Отримуйте до 250% бонусу і 200 безкоштовних обертань щодня.</h4>
@@ -230,11 +232,13 @@
 									/>
 								</picture>
 								<div class="card__info">
-									<div class="calendar">
-										<svg class="calendar__icon" width="23.23" height="23.23">
-											<use href="assets/images/sprite.svg#calendar"></use>
-										</svg>
-										<p class="calendar__date">17.02 - 24.02</p>
+									<div class="card__calendar">
+										<div class="calendar">
+											<svg class="calendar__icon" width="23.23" height="23.23">
+												<use href="assets/images/sprite.svg#calendar"></use>
+											</svg>
+											<p class="calendar__date">17.02-24.02</p>
+										</div>
 									</div>
 									<h3 class="card__title title"><span class="card__span">коктель</span> “щаслива сімка”</h3>
 									<h4 class="card__subtitle">Отримуйте до 300% бонусу і 250 безкоштовних обертань щодня.</h4>
@@ -243,23 +247,22 @@
 							</li>
 						</ul>
 					</div>
-				</div>
-			</section>
+				</section>
+			</div>
+
 			<section class="tournament">
 				<div class="tournament__container container">
-					<div class="wrapper">
-						<h2 class="tournament__title title">турнір</h2>
-						<picture class="tournament__ribbon">
-							<source media="(min-width: 1024px)" srcset="assets/images/ribbon3-desk.png" type="image/png" />
-							<img src="assets/images/ribbon3-mob.png" alt="dice" />
-						</picture>
-					</div>
+					<picture class="tournament__ribbon">
+						<source media="(min-width: 1024px)" srcset="assets/images/ribbon3-desk.png" type="image/png" />
+						<img src="assets/images/ribbon3-mob.png" alt="dice" />
+					</picture>
 
-					<p class="tournament__description description">позмагайся в турнірі за</p>
-					<span class="tournament__span">
-						<span class="tournament__description description tournament__description--lg">50</span>
-						<span class="tournament__description description tournament__description--lg">000 грн</span>
-					</span>
+					<h2 class="tournament__title title">турнір</h2>
+					<p class="description">позмагайся в турнірі за</p>
+					<div class="tournament__prize description">
+						<span>50</span>
+						<span>000 грн</span>
+					</div>
 
 					<ul class="tournament__list">
 						<li class="tournament__item">
@@ -306,36 +309,37 @@
 							</svg>
 							<p class="calendar__date">11.02 - 16.02</p>
 						</div>
+
 						<div class="button__wrapper"><a class="button" href="./index.html">взяти участь</a></div>
 					</div>
 				</div>
 			</section>
 			<section class="drawing">
 				<div class="drawing__container container">
-					<div class="wrapper">
-						<h2 class="drawing__title title">розіграш</h2>
-						<picture class="drawing__ribbon">
-							<source media="(min-width: 1024px)" srcset="assets/images/ribbon4-desk.png" type="image/png" />
-							<img src="assets/images/ribbon4-mob.png" alt="dice" />
-						</picture>
-					</div>
-					<div class="drawing__decoration">
-						<picture class="drawing__shine drawing__shine--big">
-							<source media="(min-width: 1024px)" srcset="assets/images/shine1-desk.png" type="image/png" />
-							<img class="drawing__img" src="assets/images/shine1-mob.png" alt="letter" />
-						</picture>
+					<picture class="drawing__ribbon">
+						<source media="(min-width: 1024px)" srcset="assets/images/ribbon4-desk.png" type="image/png" />
+						<img src="assets/images/ribbon4-mob.png" alt="dice" />
+					</picture>
+					<h2 class="drawing__title title">розіграш</h2>
 
-						<picture class="drawing__shine drawing__shine--small">
-							<source media="(min-width: 1024px)" srcset="assets/images/shine2-mob.png" type="image/png" />
-							<img class="drawing__img" src="assets/images/shine2-mob.png" alt="letter" />
-						</picture>
-					</div>
+					<picture class="drawing__shine drawing__shine--lg">
+						<source media="(min-width: 1024px)" srcset="assets/images/shine1-desk.png" type="image/png" />
+						<img class="drawing__img" src="assets/images/shine1-mob.png" alt="letter" />
+					</picture>
+
+					<picture class="drawing__shine drawing__shine--sm">
+						<source media="(min-width: 1024px)" srcset="assets/images/shine2-desk.png" type="image/png" />
+						<img class="drawing__img" src="assets/images/shine2-mob.png" alt="letter" />
+					</picture>
+
 					<div class="drawing__info">
-						<div class="calendar">
-							<svg class="calendar__icon" width="23.23" height="23.23">
-								<use href="assets/images/sprite.svg#calendar"></use>
-							</svg>
-							<p class="calendar__date">05.02 - 14.02</p>
+						<div class="drawing__calendar">
+							<div class="calendar">
+								<svg class="calendar__icon" width="23.23" height="23.23">
+									<use href="assets/images/sprite.svg#calendar"></use>
+								</svg>
+								<p class="calendar__date">05.02 - 14.02</p>
+							</div>
 						</div>
 						<p class="drawing__description description">святкуй день закоханих з redbet_casino</p>
 						<p class="drawing__text">

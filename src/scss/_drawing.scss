@@ -39,25 +39,29 @@
 
 .drawing__ribbon {
 	position: absolute;
-	z-index: -1;
+	z-index: 1;
+
 	@include mq('desktop', max) {
-		bottom: 0%;
-		left: 50%;
-		transform: translate(-52.1%, 79.6%);
+		top: 0%;
+		left: 45%;
+		transform: translate(-50%, 0%);
 		width: 89.6rem;
 		height: 31.3rem;
 	}
 
 	@include mq('desktop') {
-		bottom: 15%;
+		top: -17.4%;
 		left: 50%;
-		transform: translate(-47.7%, 56.3%);
-		width: 225.2rem;
+		transform: translate(-50%, 0%);
+		width: 192.2rem;
 		height: 58.6rem;
 	}
 }
 
 .drawing__title {
+	position: relative;
+	z-index: 2;
+
 	@include mq('desktop', max) {
 		margin-bottom: 38.7rem;
 	}
@@ -65,10 +69,6 @@
 	@include mq('desktop') {
 		margin-bottom: 19.9rem;
 	}
-}
-
-.drawing__decoration {
-	position: relative;
 }
 
 .drawing__info {
@@ -97,33 +97,43 @@
 		transform: translate(-50%, -50%);
 	}
 
-	&--big {
-		margin: -10.5rem 35.2rem 0rem;
-		width: 43.5rem;
-		height: 43rem;
+	&--lg {
+		margin: -23.9rem 35rem 0rem;
+		width: 40rem;
+		height: 40rem;
 	}
 
-	&--small {
-		margin: 10.1rem 13.9rem 0rem;
-		width: 25.5rem;
-		height: 25.5rem;
+	&--sm {
+		margin: -4.4rem 14rem 0rem;
+		width: 20rem;
+		height: 20rem;
 	}
 }
 
 .drawing__img {
-	animation: shine 8s ease-in-out 10s infinite;
+	animation: shine 8s linear 10s infinite;
+}
+
+.drawing__calendar {
+	@include mq('desktop', max) {
+		margin-bottom: 2rem;
+	}
+
+	@include mq('desktop') {
+		margin-bottom: 2.5rem;
+	}
 }
 
 .drawing__description {
 	color: $white;
 
 	@include mq('desktop', max) {
-		margin: 2rem 0 1.8rem;
+		margin-bottom: 1.8rem;
 		max-width: 34rem;
 	}
 
 	@include mq('desktop') {
-		margin: 2.5rem 0 2.8rem;
+		margin-bottom: 2.8rem;
 		max-width: 53rem;
 		text-align: left;
 		letter-spacing: 2%;
@@ -132,11 +142,10 @@
 
 .drawing__text {
 	font-size: 1.8rem;
-
 	letter-spacing: 1.8%;
 
 	&--highlight {
-		color: $orange;
+		color: $pink1;
 	}
 
 	@include mq('desktop', max) {

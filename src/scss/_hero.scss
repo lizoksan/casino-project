@@ -2,18 +2,36 @@
 @use 'variables' as *;
 
 .hero {
+	position: relative;
 	background-size: cover;
 
 	@include mq('desktop', max) {
 		padding: 4.8rem 0 12.2rem;
-		background-position: bottom;
+		background-position: bottom center;
 		@include bg('../assets/images/hero-mob.jpg');
 	}
 
 	@include mq('desktop') {
 		padding: 12.5rem 0 9rem;
-		background-position: right;
+		background-position: right center;
 		@include bg('../assets/images/hero-desk.jpg');
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		background: linear-gradient(180deg, rgba(210, 228, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
+		width: 100%;
+		left: 0;
+		height: 5rem;
+
+		@include mq('desktop', max) {
+			bottom: 5rem;
+		}
+
+		@include mq('desktop') {
+			bottom: 4rem;
+		}
 	}
 }
 
@@ -28,15 +46,13 @@
 }
 
 .hero__content {
-	display: flex;
-	flex-direction: column;
-
 	@include mq('desktop', max) {
+		display: flex;
+		flex-direction: column;
 		align-items: center;
 	}
 
 	@include mq('desktop') {
-		align-items: start;
 		max-width: 66rem;
 	}
 }
@@ -62,14 +78,14 @@
 	}
 
 	@include mq('desktop') {
-		margin-bottom: 4.4rem;
+		margin-bottom: 4.3rem;
 		font-size: 9.3rem;
 		text-align: left;
 	}
 }
 
 .hero__description {
-	color: $orange;
+	color: $pink1;
 
 	@include mq('desktop') {
 		text-align: left;
@@ -109,34 +125,34 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-}
 
-.hero__cube--big {
-	@include mq('desktop', max) {
-		margin: 20.3rem -12.6rem 0rem;
-		width: 18rem;
-		height: 18rem;
+	&.hero__cube--lg {
+		@include mq('desktop', max) {
+			margin: 20.3rem -12.6rem 0rem;
+			width: 18rem;
+			height: 18rem;
+		}
+
+		@include mq('desktop') {
+			margin: 4.5rem -28.7rem 0rem;
+			width: 29.6rem;
+			height: 28.9rem;
+		}
 	}
 
-	@include mq('desktop') {
-		margin: 4.5rem -28.7rem 0rem;
-		width: 29.6rem;
-		height: 28.9rem;
-	}
-}
+	&.hero__cube--sm {
+		z-index: 5;
+		@include mq('desktop', max) {
+			margin: 22.8rem 14.2rem 0rem;
+			width: 10.5rem;
+			height: 9rem;
+		}
 
-.hero__cube--small {
-	z-index: 5;
-	@include mq('desktop', max) {
-		margin: 22.8rem 14.2rem 0rem;
-		width: 10.5rem;
-		height: 9rem;
-	}
-
-	@include mq('desktop') {
-		margin: 11.8rem 60.4rem 0rem;
-		width: 19.8rem;
-		height: 17rem;
+		@include mq('desktop') {
+			margin: 11.8rem 60.4rem 0rem;
+			width: 19.8rem;
+			height: 17rem;
+		}
 	}
 }
 
