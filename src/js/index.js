@@ -3,20 +3,22 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-const SELECTORS = {};
-
-const CLASSNAMES = {};
+const SELECTORS = {
+	questsSwiper: '.quests__swiper',
+	questsButtonNext: '.quests__button--next',
+	questsButtonPrev: '.quests__button--prev',
+};
 
 document.addEventListener('DOMContentLoaded', () => {
-	const swiper = new Swiper('.quests__swiper', {
+	const swiper = new Swiper(SELECTORS.questsSwiper, {
 		modules: [Navigation],
 
 		spaceBetween: 250,
 		loop: true,
 
 		navigation: {
-			nextEl: '.quests__button--next',
-			prevEl: '.quests__button--prev',
+			nextEl: SELECTORS.questsButtonNext,
+			prevEl: SELECTORS.questsButtonPrev,
 		},
 
 		breakpoints: {
