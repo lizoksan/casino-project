@@ -234,12 +234,18 @@ function devWebpPlugin() {
 		} catch {}
 	}
 
+	async function generateAll() {
+		const images = await fg('src/assets/images/**/*.{jpg,jpeg,png}');
+		await Promise.all(images.map(generateWebp));
+	}
+
 	return {
 		name: 'dev-webp',
-		apply: 'serve',
+		async buildStart() {
+			await generateAll();
+		},
 		async configureServer(server) {
-			const images = await fg('src/assets/images/**/*.{jpg,jpeg,png}');
-			await Promise.all(images.map(generateWebp));
+			await generateAll();
 
 			const imagesDir = path.resolve('src/assets/images');
 			server.watcher.add(imagesDir);
