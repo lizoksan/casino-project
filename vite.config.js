@@ -155,10 +155,10 @@ function imageOptimizePlugin() {
 			outDir = path.resolve(config.root, config.build.outDir);
 		},
 		async closeBundle() {
-			const distImagesDir = path.join(outDir, 'assets/images');
-			if (!existsSync(distImagesDir)) return;
+			const distAssetsDir = path.join(outDir, 'assets');
+			if (!existsSync(distAssetsDir)) return;
 
-			const images = await fg([`${distImagesDir}/**/*.{jpg,jpeg,png}`]);
+			const images = await fg([`${distAssetsDir}/**/*.{jpg,jpeg,png}`]);
 
 			const results = await Promise.all(
 				images.map(async (imgPath) => {
@@ -195,7 +195,7 @@ function imageOptimizePlugin() {
 
 			const spritePath = path.join(outDir, 'assets/images/sprite.svg');
 			const spriteSize = existsSync(spritePath) ? statSync(spritePath).size : null;
-			const cssPath = path.join(outDir, 'index.css');
+			const cssPath = path.join(outDir, 'assets/index.css');
 			const cssSize = existsSync(cssPath) ? statSync(cssPath).size : null;
 			const jsPath = path.join(outDir, 'js/index.js');
 			const jsSize = existsSync(jsPath) ? statSync(jsPath).size : null;
@@ -268,12 +268,7 @@ export default defineConfig({
 		cssMinify: true,
 		rollupOptions: {
 			output: {
-				assetFileNames: (assetInfo) => {
-					const name = assetInfo.names?.[0] ?? '';
-					if (/\.css$/.test(name)) return '[name][extname]';
-					if (/\.(woff2?|ttf|eot|otf)$/.test(name)) return 'assets/fonts/[name][extname]';
-					return 'assets/images/[name][extname]';
-				},
+				assetFileNames: 'assets/[name][extname]',
 				chunkFileNames: 'js/[name].js',
 				entryFileNames: 'js/[name].js',
 			},
