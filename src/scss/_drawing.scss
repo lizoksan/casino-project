@@ -33,7 +33,7 @@
 		max-width: 44rem;
 	}
 	@include mq('desktop') {
-		max-width: 114.6em;
+		max-width: 114.6rem;
 	}
 }
 
@@ -134,15 +134,14 @@
 
 	@include mq('desktop') {
 		margin-bottom: 2.8rem;
-		max-width: 53rem;
+		max-width: 54rem;
 		text-align: left;
-		letter-spacing: 2%;
+		letter-spacing: 0.1rem;
 	}
 }
 
 .drawing__text {
 	font-size: 1.8rem;
-	letter-spacing: 1.8%;
 
 	&--highlight {
 		color: $pink1;
@@ -155,6 +154,6 @@
 
 	@include mq('desktop') {
 		margin-bottom: 2.8rem;
-		max-width: 53rem;
+		max-width: 52rem;
 	}
 }

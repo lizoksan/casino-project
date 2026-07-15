@@ -55,42 +55,6 @@
 	}
 }
 
-.quests__pic {
-	position: absolute;
-
-	@include mq('desktop', max) {
-		width: 13rem;
-		height: 13rem;
-		top: -10.8rem;
-	}
-
-	@include mq('desktop') {
-		width: 22.7rem;
-		height: 22.7rem;
-		top: 1.9rem;
-	}
-
-	&--left {
-		@include mq('desktop', max) {
-			left: -6.2rem;
-		}
-
-		@include mq('desktop') {
-			left: -23rem;
-		}
-	}
-
-	&--right {
-		@include mq('desktop', max) {
-			right: -6.5rem;
-		}
-
-		@include mq('desktop') {
-			right: -23.3rem;
-		}
-	}
-}
-
 .quests__swiper {
 	overflow: visible !important;
 }
