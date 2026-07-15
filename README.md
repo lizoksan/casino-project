@@ -4,13 +4,6 @@ A learning project — a landing page for an online casino. The goal was to prac
 
 Not a real product and has no backend — a static page with no payment, registration, or gameplay functionality.
 
-## Page sections
-
-- **Hero** — landing screen with logo and call to action
-- **Quests** — quest carousel (Swiper)
-- **Bonuses** — bonus cards
-- **Tournament** — tournament section
-- **Drawing** — giveaway/raffle section
 
 ## Stack
 
