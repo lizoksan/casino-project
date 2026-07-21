@@ -5,7 +5,7 @@ page only: no backend, no real payments, no registration or gameplay.
 
 🔗 Live demo: https://lizoksan.github.io/casino-project/
 
-![Project screenshot](src/assets/preview.png)
+![Project screenshot](src/assets/preview.jpg)
 
 ## What it does
 
