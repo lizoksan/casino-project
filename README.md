@@ -5,9 +5,14 @@ page only: no backend, no real payments, no registration or gameplay.
 
 🔗 Live demo: https://lizoksan.github.io/casino-project/
 
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![SCSS](https://img.shields.io/badge/SCSS-CC6699?logo=sass&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)
+
 ![Project screenshot](src/assets/preview.jpg)
 
-## What it does
+## Key features
 
 - Quests section with a Swiper carousel
 - Angled buttons and panels made with CSS `clip-path` (no images needed)
@@ -35,4 +40,3 @@ npm install
 npm run dev       # dev server
 npm run build      # production build
 npm run preview    # preview the production build
-```
